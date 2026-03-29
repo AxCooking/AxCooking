@@ -4211,5 +4211,195 @@
         "text": "In the same frying pan in which the veal was seared, add the frying butter on heat level 7/9, briefly sauté the shallots and garlic, add the mushrooms and immediately season with salt and pepper. Sauté the mushrooms, stirring constantly, until they start to shrink. Then deglaze with the white wine/mustard mix and reduce completely. Add full cream and the meat juices from the sautéed veal and reduce to desired consistency on medium heat. Turn off heat (sauce should no longer boil), then add the veal and parsley, toss briefly and serve. If the sauce is still boiling when the veal is added, the veal will be tough."
       }
     ]
+  },
+  {
+    "id": "pesto-genovese-basilikum-pesto",
+    "title_de": "Pesto Genovese (Basilikum Pesto)",
+    "title_en": "Pesto Genovese (basil pesto)",
+    "desc_de": "Pesto Genovese mit Pasta ist das Lieblingsessen meiner Kinder. Frisch, gesund und einfach nur lecker. Nicht nur mit Pasta ist das Pesto Genovese äusserst lecker sondern auch als Brotaufstrich auf einer getoasteten Brotscheibe oder als Zusatz zu einem Calabrese Salat.\r\n\r\nDas Pesto Genovese ist vielseitig als Zusatz verwendbar und wertet viele Gerichte auf. Einmal zubereitet, lässt sich in wenigen Minuten ein herrliches Pastagericht zubereiten.",
+    "desc_en": "Pesto Genovese with pasta is my kids' favorite. Fresh, healthy and simply delicious. Not only with pasta is the Pesto Genovese extremely tasty but also as a spread on a toasted slice of bread or as an addition to a Calabrese salad.\r\n\r\nThe Pesto Genovese is versatile as an additive and enhances many dishes. Once prepared, a delicious pasta dish can be prepared in a few minutes.",
+    "difficulty_de": "einfach",
+    "difficulty_en": "simple",
+    "workTime": "20m",
+    "cookTime": "10m",
+    "restTime": "0m",
+    "totalTime": "30m",
+    "youtubeId": "2h24n7zOLFE",
+    "youtubeUrl": "https://www.youtube.com/watch?v=2h24n7zOLFE",
+    "tags_de": [
+      "Beilage",
+      "Vegan",
+      "Italienische Küche",
+      "Frische Kräuter"
+    ],
+    "tags_en": [],
+    "baseServings": 2,
+    "servingsUnit_de": "Drahtbügelgläser",
+    "servingsUnit_en": "wire hanger jars",
+    "emoji": "🍽",
+    "steps_de": [
+      {
+        "title": "Basilikum vorbereiten",
+        "ingredients": [
+          {
+            "amount": 110,
+            "unit": "gr",
+            "name": "Basilikum (frisch)"
+          }
+        ],
+        "text": "Dicke Basilikumstiele entfernen, den Rest im Wasserbad gut waschen und in Salatschleuder trocknen, dann auf Küchentuch legen und vollständig trocknen lassen. Basilikummenge mit 3 multipliziert ergibt in etwa die Pestomenge."
+      },
+      {
+        "title": "Käse vorbereiten",
+        "ingredients": [
+          {
+            "amount": 80,
+            "unit": "Stk.",
+            "name": "Parmigiano Reggiano (frisch gerieben)"
+          },
+          {
+            "amount": 50,
+            "unit": "gr",
+            "name": "Pecorino Fiore Sardo oder Romano (frisch gerieben)"
+          }
+        ],
+        "text": "Käse fein reiben und bei Seite stellen. Ich mag am liebsten den Pecorino Romano, Original wird aber Pecorino Fiore Sardo verwendet. Man kann auch nur Parmigiano Reggiano verwenden, wenn man keinen Pecorino zur Hand hat. Wichtig ist, dass die Käse frisch gerieben werden."
+      },
+      {
+        "title": "Pinienkerne rösten",
+        "ingredients": [
+          {
+            "amount": 60,
+            "unit": "gr",
+            "name": "Pinienkerne"
+          }
+        ],
+        "text": "Pinienkerne auf Backpapier auf Backblech verteilen und während 12 min bei 150° C rösten, danach abkühlen lassen. Als günstigere Variante kann man auch die gleiche Menge Cashew Nüsse verwenden."
+      },
+      {
+        "title": "Pesto zubereiten",
+        "ingredients": [
+          {
+            "amount": 110,
+            "unit": "gr",
+            "name": "Olivenöl (kaltgepresst, hohe Qualität)"
+          },
+          {
+            "amount": 5,
+            "unit": "gr",
+            "name": "Salz"
+          },
+          {
+            "amount": 1,
+            "unit": "gr",
+            "name": "Pfeffer (frisch gemahlen)"
+          },
+          {
+            "amount": 6,
+            "unit": "gr",
+            "name": "Knoblauch (frisch)"
+          }
+        ],
+        "text": "Knoblauch schälen, halbieren und Trieb entfernen. Zusammen mit dem Öl, Salz Pfeffer und Basilikum in Mixer geben und mixen bis eine Paste entsteht. Pinienkerne hinzugeben und kurz mixen bis diese etwas zerkleinert sind. Käse hinzugeben und nochmals kurz mixen (nicht zu lange), sonst kann sich das Pesto teilen."
+      },
+      {
+        "title": "Aufbewahrung und Haltbarkeit",
+        "ingredients": [
+          {
+            "amount": 4,
+            "unit": "gr",
+            "name": "Olivenöl (kaltgepresst, hohe Qualität)"
+          },
+          {
+            "amount": 2,
+            "unit": "gr",
+            "name": "Drahtbügelgläser (200 ml Volumen)"
+          }
+        ],
+        "text": "Pesto in kleine saubere und wiederverschliessbare Gläser abfüllen und mit zusätzlichem Olivenöl für Konservierung bis zum Rand auffüllen. Im Kühlschrank für mindestens 3 bis 4 Wochen haltbar. Einmal geöffnete Gläser sofort aufbrauchen."
+      }
+    ],
+    "steps_en": [
+      {
+        "title": "Prepare basil",
+        "ingredients": [
+          {
+            "amount": 110,
+            "unit": "gr",
+            "name": "Basil (fresh)"
+          }
+        ],
+        "text": "Remove thick basil stems, wash the rest well in a water bath and dry in salad spinner, then place on kitchen towel and let dry completely. Amount of basil multiplied by 3 is approximately the amount of pesto you get."
+      },
+      {
+        "title": "Prepare cheese",
+        "ingredients": [
+          {
+            "amount": 80,
+            "unit": "Stk.",
+            "name": "Parmigiano Reggiano (freshly grated)"
+          },
+          {
+            "amount": 50,
+            "unit": "gr",
+            "name": "Pecorino Fiore Sardo or Romano (freshly grated)"
+          }
+        ],
+        "text": "Finely grate cheese and set aside. I like Pecorino Romano best, but original is Pecorino Fiore Sardo. You can also use just Parmigiano Reggiano if you don't have Pecorino on hand. It is important that the cheeses are freshly grated."
+      },
+      {
+        "title": "Roast pine nuts",
+        "ingredients": [
+          {
+            "amount": 60,
+            "unit": "gr",
+            "name": "Pine nuts"
+          }
+        ],
+        "text": "Spread pine nuts on baking paper on baking sheet and roast for 12 min at 150° C | 300° F, then let cool. As a cheaper option, you can also use the same amount of cashew nuts."
+      },
+      {
+        "title": "Prepare pesto",
+        "ingredients": [
+          {
+            "amount": 110,
+            "unit": "gr",
+            "name": "Olive oil (cold pressed, high quality)"
+          },
+          {
+            "amount": 5,
+            "unit": "gr",
+            "name": "Salt"
+          },
+          {
+            "amount": 1,
+            "unit": "gr",
+            "name": "Pepper (freshly grounded)"
+          },
+          {
+            "amount": 6,
+            "unit": "gr",
+            "name": "Garlic (fresh)"
+          }
+        ],
+        "text": "Peel the garlic, cut it in half and remove the shoots. Put in blender together with the oil, salt pepper and basil and blend until a paste is formed. Add pine nuts and blend briefly until slightly chopped. Add cheese and blend again briefly (not too long), otherwise the pesto may split."
+      },
+      {
+        "title": "Storage and durability",
+        "ingredients": [
+          {
+            "amount": 4,
+            "unit": "gr",
+            "name": "Olive oil (cold pressed, high quality)"
+          },
+          {
+            "amount": 2,
+            "unit": "gr",
+            "name": "Wire hanger jars (200 ml volume)"
+          }
+        ],
+        "text": "Pour pesto into small clean and resealable jars and fill to the top with additional olive oil for preservation. Store in refrigerator for at least 3 to 4 weeks. Use up jars immediately once opened."
+      }
+    ]
   }
 ]
