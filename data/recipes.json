@@ -1,1 +1,188 @@
-[]
+[
+  {
+    "id": "pasta-carbonara-mit-pochiertem-ei",
+    "title_de": "PASTA CARBONARA MIT POCHIERTEM EI",
+    "title_en": "PASTA CARBONARA WITH POACHED EGG",
+    "desc_de": "Die nicht wirklich klassische Zubereitung der Carbonara gehört zu meinen liebsten Pasta Gerichten. Bucatini passen hervorragend zur Carbonara und das pochierte Ei oben drauf gibt das gewisse Etwas. Falls man es lieber klassisch möchte, lässt man den Knoblauch weg. Grundsätzlich wird anstelle von gewöhnlichem Bratspeck der sogenannte Guanciale (luftgetrocknete Schweinebacke) verwendet. In mehreren Versuchen kam das bei mir nie gut heraus. Meines Erachtens ist Guanciale viel zu salzig, zu fettig und viel zu stark im Geschmack. Überdies ist es kostspielig und nicht einfach zu bekommen. Bratspeck passt einfach besser.",
+    "desc_en": "The not really classic preparation of carbonara is one of my favorite pasta dishes. Bucatini go great with carbonara and the poached egg on top adds that certain something. If you prefer it classic, omit the garlic. Officially, instead of ordinary fried bacon, the so-called guanciale (air-dried pork cheek) is used. In several attempts, this never came out well for me. In my opinion, guanciale is far too salty, too greasy and far too strong in flavor. Moreover, it is expensive and not easy to get. Fried bacon just fits better.",
+    "difficulty_de": "einfach",
+    "difficulty_en": "simple",
+    "workTime": "10m",
+    "cookTime": "12m",
+    "restTime": "0m",
+    "totalTime": "22m",
+    "youtubeId": "uS2DGzNplWg",
+    "youtubeUrl": "https://www.youtube.com/watch?v=uS2DGzNplWg&t",
+    "tags_de": [
+      "Hauptspeise",
+      "Fleisch",
+      "Italienische Küche",
+      "Pasta"
+    ],
+    "tags_en": [],
+    "baseServings": 2,
+    "servingsUnit_de": "Personen",
+    "servingsUnit_en": "people",
+    "emoji": "🍽",
+    "steps_de": [
+      {
+        "title": "Pasta kochen",
+        "ingredients": [
+          {
+            "amount": 5000,
+            "unit": "gr",
+            "name": "Wasser"
+          },
+          {
+            "amount": 30,
+            "unit": "gr",
+            "name": "Grobes Salz"
+          },
+          {
+            "amount": 200,
+            "unit": "gr",
+            "name": "Bucatini (anstelle von Spaghetti)"
+          }
+        ],
+        "text": "Wasser in einem grossen Topf aufkochen, dann salzen und die Pasta darin al dente Kochen. Das Wasser darf nicht zu salzig sein, weil das Pasta Wasser noch für die Carbonara Sauce benötigt wird."
+      },
+      {
+        "title": "Eier pochieren",
+        "ingredients": [
+          {
+            "amount": 1500,
+            "unit": "gr",
+            "name": "Wasser"
+          },
+          {
+            "amount": 2,
+            "unit": "Stk.",
+            "name": "Eier (gross)"
+          }
+        ],
+        "text": "Wasser in einem Topf erhitzen und zum simmern bringen. Dann mit einer Suppenkelle das aufgeschlagene Ei langsam ins Wasser geben und während 3 min pochieren. Ränder trimmen und bei Seite stellen."
+      },
+      {
+        "title": "Carbonara zubereiten",
+        "ingredients": [
+          {
+            "amount": 2,
+            "unit": "Stk.",
+            "name": "Eier (gross)"
+          },
+          {
+            "amount": 1,
+            "unit": "gr",
+            "name": "Eigelb (gross)"
+          },
+          {
+            "amount": 30,
+            "unit": "Stk.",
+            "name": "Parmigiano Reggiano (frisch gerieben)"
+          },
+          {
+            "amount": 20,
+            "unit": "gr",
+            "name": "Pecorino Romano (frisch gerieben)"
+          },
+          {
+            "amount": 2,
+            "unit": "gr",
+            "name": "Pfeffer (frisch gemahlen)"
+          },
+          {
+            "amount": 6,
+            "unit": "gr",
+            "name": "Bratspeck (anstelle von Guanciale)"
+          },
+          {
+            "amount": 1,
+            "unit": "gr",
+            "name": "Knoblauch (klein)"
+          }
+        ],
+        "text": "Die Pasta direkt aus dem Topf mit einer Pastakelle in die Pfanne mit dem Speck geben. Ein paar mal durchschwenken und dann die Sauce und etwas Pasta Wasser darüber giessen. Mit zwei Kellen die Pasta mehrmals gut vermengen. Falls die Konsistenz zu dickflüssig ist, noch mehr Pasta Wasser hinzufügen, falls zu flüssig noch mehr Käse hinzugeben und wieder vermengen, bis die Konsistenz passt. Auf einem Teller servieren und das pochierte Ei oben auflegen, mit Parmesan und Pfeffer dekorieren und sofort servieren."
+      }
+    ],
+    "steps_en": [
+      {
+        "title": "Pasta cooking",
+        "ingredients": [
+          {
+            "amount": 5000,
+            "unit": "gr",
+            "name": "Water"
+          },
+          {
+            "amount": 30,
+            "unit": "gr",
+            "name": "Coarse salt"
+          },
+          {
+            "amount": 200,
+            "unit": "gr",
+            "name": "Bucatini (instead of Spaghetti)"
+          }
+        ],
+        "text": "Boil water in a large pot, salt it and cook the pasta al dente. The water must not be too salty, because the pasta water is needed for the carbonara sauce."
+      },
+      {
+        "title": "Poach eggs",
+        "ingredients": [
+          {
+            "amount": 1500,
+            "unit": "gr",
+            "name": "Water"
+          },
+          {
+            "amount": 2,
+            "unit": "Stk.",
+            "name": "Eggs (large)"
+          }
+        ],
+        "text": "Heat water in a pot and bring to a simmer. Then, using a soup ladle, slowly add the beaten egg to the water and poach for 3 min. Trim the edges and set aside."
+      },
+      {
+        "title": "Prepare Carbonara",
+        "ingredients": [
+          {
+            "amount": 2,
+            "unit": "Stk.",
+            "name": "Eggs (large)"
+          },
+          {
+            "amount": 1,
+            "unit": "Stk.",
+            "name": "Egg york (large)"
+          },
+          {
+            "amount": 30,
+            "unit": "Stk.",
+            "name": "Parmigiano Reggiano (freshly grated)"
+          },
+          {
+            "amount": 20,
+            "unit": "gr",
+            "name": "Pecorino Romano (freshly grated)"
+          },
+          {
+            "amount": 2,
+            "unit": "gr",
+            "name": "Pepper (freshly grounded)"
+          },
+          {
+            "amount": 6,
+            "unit": "gr",
+            "name": "Bacon (instead of Guanciale)"
+          },
+          {
+            "amount": 1,
+            "unit": "gr",
+            "name": "Garlic (small)"
+          }
+        ],
+        "text": "Put the pasta directly from the pot with a pasta ladle into the pan with the bacon. Toss a few times and then pour the sauce and some pasta water over it. Using two ladles, mix the pasta well several times. If the consistency is too thick, add more pasta water, if too runny add more cheese and mix again until the consistency is right. Serve on a plate with the poached egg on top, garnish with parmesan and pepper and serve immediately."
+      }
+    ]
+  }
+]
