@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AxCooking — simple and delicious</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--black:#1a1a1a;--white:#fff;--bg:#fafafa;--text:#333;--text-light:#666;--text-muted:#999;--border:#e0e0e0;--border-light:#f0f0f0;--accent:#c0392b;--accent-hover:#a93226;--green:#27ae60;--blue:#2980b9;--ing-border:#ccc;--font-heading:'Lora',Georgia,serif;--font-body:'Open Sans','Helvetica Neue',sans-serif}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+header{background:var(--black);color:var(--white);position:sticky;top:0;z-index:100}
+.header-inner{max-width:900px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{display:flex;align-items:center;cursor:pointer;text-decoration:none}
+.logo img{height:28px;width:auto;filter:invert(1)}
+.header-right{display:flex;align-items:center;gap:16px}
+.header-icons{display:flex;gap:12px}
+.header-icons a{color:var(--white);text-decoration:none;font-size:.8rem;opacity:.7;transition:opacity .2s;display:flex;align-items:center;gap:4px}
+.header-icons a:hover{opacity:1}
+.header-icons svg{width:16px;height:16px;fill:currentColor}
+.lang-switch{display:flex;border:1px solid rgba(255,255,255,.3);border-radius:3px;overflow:hidden}
+.lang-switch button{background:transparent;border:none;color:rgba(255,255,255,.6);padding:4px 10px;font-size:.75rem;font-weight:600;cursor:pointer;font-family:var(--font-body);transition:all .2s}
+.lang-switch button.active{background:rgba(255,255,255,.15);color:var(--white)}
+.lock-icon{color:rgba(255,255,255,.5);font-size:.85rem;cursor:pointer;display:flex;align-items:center;gap:4px;background:none;border:none;font-family:var(--font-body);transition:color .2s}
+.lock-icon:hover{color:rgba(255,255,255,.8)}
+.login-overlay{position:fixed;inset:0;z-index:500;background:rgba(0,0,0,.5);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center}
+.login-overlay.open{display:flex}
+.login-box{background:var(--white);border-radius:8px;padding:32px;max-width:380px;width:90%;box-shadow:0 20px 60px rgba(0,0,0,.2)}
+.login-box h3{font-family:var(--font-heading);font-size:1.2rem;margin-bottom:20px}
+.login-box label{font-size:.85rem;color:var(--text-light);display:block;margin-bottom:4px}
+.login-box input{width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:4px;font-size:.9rem;font-family:var(--font-body);margin-bottom:14px;outline:none}
+.login-box input:focus{border-color:var(--text-light)}
+.login-box .login-error{color:var(--accent);font-size:.82rem;margin-bottom:10px;display:none}
+.login-box .login-hint{font-size:.78rem;color:var(--text-muted);margin-bottom:14px;line-height:1.4}
+.login-btns{display:flex;gap:10px;justify-content:flex-end}
+.btn-login{background:var(--black);color:var(--white);border:none;padding:9px 20px;border-radius:4px;font-size:.85rem;font-weight:600;cursor:pointer;font-family:var(--font-body)}
+.btn-cancel{background:transparent;border:1px solid var(--border);color:var(--text-light);padding:9px 20px;border-radius:4px;font-size:.85rem;cursor:pointer;font-family:var(--font-body)}
+.header-search{flex:1;max-width:360px;position:relative}
+.header-search input{width:100%;padding:7px 32px 7px 14px;border:1px solid rgba(255,255,255,.25);border-radius:4px;font-size:.82rem;font-family:var(--font-body);background:rgba(255,255,255,.1);color:var(--white);outline:none;transition:border-color .2s,background .2s}
+.header-search input::placeholder{color:rgba(255,255,255,.45)}
+.header-search input:focus{border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.15)}
+.header-search .search-clear{position:absolute;right:8px;top:50%;transform:translateY(-50%);background:none;border:none;color:rgba(255,255,255,.5);font-size:.85rem;cursor:pointer;display:none;padding:2px 4px;line-height:1}
+.header-search .search-clear:hover{color:rgba(255,255,255,.8)}
+.rd-nav{display:flex;gap:10px;margin:0 0 20px}
+.rd-nav-btn{display:flex;align-items:center;gap:10px;padding:6px 12px;border-radius:6px;background:var(--black);cursor:pointer;font-family:var(--font-body);color:var(--white);transition:all .2s;text-decoration:none;flex:1;min-width:0;border:none;height:54px;overflow:hidden}
+.rd-nav-btn:hover{background:#333}
+.rd-nav-btn.next{justify-content:flex-end;text-align:right}
+.rd-nav-arrow{flex-shrink:0;width:0;height:0}
+.rd-nav-arrow.left{border-top:7px solid transparent;border-bottom:7px solid transparent;border-right:10px solid var(--white)}
+.rd-nav-arrow.right{border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:10px solid var(--white)}
+.rd-nav-title{font-size:.8rem;font-weight:600;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;line-height:1.3}
+.rd-nav-thumb{width:68px;height:42px;border-radius:3px;overflow:hidden;flex-shrink:0;background:rgba(255,255,255,.1)}
+.rd-nav-thumb img{width:100%;height:100%;object-fit:cover}
+.nav-tabs{background:var(--white);border-bottom:1px solid var(--border)}
+.nav-tabs-inner{max-width:900px;margin:0 auto;padding:0 24px;display:flex}
+.nav-tab{padding:12px 20px;font-size:.85rem;font-weight:500;color:var(--text-light);cursor:pointer;border-bottom:2px solid transparent;transition:all .2s;text-decoration:none}
+.nav-tab:hover,.nav-tab.active{color:var(--text);border-bottom-color:var(--black)}
+.nav-tab.hidden{display:none}
+.main{max-width:900px;margin:0 auto;padding:0 24px}
+.loading{text-align:center;padding:60px;color:var(--text-muted);font-size:.95rem}
+.loading::after{content:'';display:inline-block;width:18px;height:18px;border:2px solid var(--border);border-top-color:var(--text);border-radius:50%;animation:spin .6s linear infinite;margin-left:10px;vertical-align:middle}
+@keyframes spin{to{transform:rotate(360deg)}}
+.recipe-list{padding:32px 0 60px}
+.recipe-item{display:flex;gap:20px;padding:20px 0;border-bottom:1px solid var(--border-light);cursor:pointer;transition:background .15s}
+.recipe-item:hover{background:rgba(0,0,0,.015)}
+.recipe-thumb{width:240px;height:160px;border-radius:4px;overflow:hidden;flex-shrink:0;background:#eee;display:flex;align-items:center;justify-content:center;font-size:2rem}
+.recipe-thumb img{width:100%;height:100%;object-fit:cover}
+.recipe-info{flex:1;min-width:0}
+.recipe-info h3{font-family:var(--font-heading);font-size:1.1rem;font-weight:600;margin-bottom:4px;color:var(--text)}
+.recipe-info p{font-size:.85rem;color:var(--text-light);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.recipe-tags{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.recipe-tag{font-size:.7rem;padding:2px 8px;border-radius:3px;background:#f0f0f0;color:var(--text-light);font-weight:500}
+.recipe-list.hidden{display:none}
+.recipe-detail{padding:32px 0 60px;display:none}
+.recipe-detail.active{display:block}
+.rd-back{font-size:.85rem;color:var(--text-light);cursor:pointer;margin-bottom:20px;display:inline-flex;align-items:center;gap:6px;text-decoration:none}
+.rd-back:hover{color:var(--text)}
+.rd-header{display:flex;gap:24px;margin-bottom:0;align-items:flex-start}
+.rd-header-text{flex:1;min-width:0}
+.rd-header h1{font-family:var(--font-heading);font-size:2rem;font-weight:700;line-height:1.25}
+.rd-title-area{height:7.5rem;margin-bottom:16px;overflow:hidden}
+.rd-image-col{flex-shrink:0;width:calc(50% - 12px)}
+.rd-image-col img{width:100%;border-radius:6px;aspect-ratio:16/9;object-fit:cover;cursor:pointer;display:block}
+.rd-image-col .rd-yt-link{font-size:.8rem;color:var(--text-muted);margin-top:6px;display:flex;align-items:center;gap:6px}
+.rd-image-col .rd-yt-link a{color:var(--blue);text-decoration:none}
+.rd-desc-full{font-size:.92rem;color:var(--text-light);line-height:1.7;margin-bottom:24px;clear:both}
+.rd-meta{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:16px}
+.rd-meta-item{display:flex;flex-direction:column;align-items:center;gap:2px}
+.rd-meta-icon{color:var(--text-muted);display:flex;align-items:center;justify-content:center}
+.rd-meta-icon svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.rd-meta-label{font-size:.7rem;color:var(--text-muted)}
+.rd-meta-value{font-size:.85rem;font-weight:600;color:var(--text)}
+.rd-cooking-title{font-family:var(--font-heading);font-size:1.4rem;font-weight:600;margin-bottom:24px;padding-bottom:8px;border-bottom:2px solid var(--black)}
+.rd-servings{display:flex;align-items:center;gap:12px;margin-bottom:28px;float:right}
+.rd-servings label{font-size:.85rem;color:var(--text-light)}
+.rd-servings input{width:85px;padding:6px 8px;border:1px solid var(--border);border-radius:4px;font-size:.9rem;text-align:center;font-family:var(--font-body);color:var(--text)}
+.rd-servings span{font-size:.85rem;color:var(--text-light)}
+.step{margin-bottom:32px}
+.step-header{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.step-num{width:32px;height:32px;border-radius:50%;background:var(--black);color:var(--white);font-size:.85rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.step h2{font-family:var(--font-heading);font-size:1.15rem;font-weight:600}
+.ingredient-row{display:flex;align-items:baseline;gap:12px;padding:8px 0;border-bottom:1px solid var(--ing-border)}
+.ing-amount{min-width:55px;font-size:.9rem;font-weight:600;color:var(--text);text-align:right}
+.ing-unit{min-width:35px;font-size:.82rem;color:var(--text-muted)}
+.ing-name{font-size:.9rem;color:var(--text);flex:1}
+.step-text{font-size:.88rem;color:var(--text-light);line-height:1.7;margin-top:14px}
+.import-panel{padding:32px 0 60px;display:none}
+.import-panel.active{display:block}
+.import-panel h2{font-family:var(--font-heading);font-size:1.4rem;margin-bottom:16px}
+.import-desc{font-size:.9rem;color:var(--text-light);margin-bottom:24px;line-height:1.6}
+.drop-zone{border:2px dashed var(--border);border-radius:8px;padding:48px 24px;text-align:center;cursor:pointer;transition:border-color .2s,background .2s;margin-bottom:20px}
+.drop-zone:hover,.drop-zone.dragover{border-color:var(--accent);background:rgba(192,57,43,.03)}
+.drop-zone-icon{font-size:2.5rem;margin-bottom:12px}
+.drop-zone-text{font-size:.9rem;color:var(--text-light)}
+.drop-zone-text strong{color:var(--text)}
+.drop-zone input{display:none}
+.import-status{padding:16px;border-radius:6px;margin-bottom:16px;font-size:.88rem;display:none;white-space:pre-line}
+.import-status.success{display:block;background:#e8f5e9;color:#2e7d32;border:1px solid #c8e6c9}
+.import-status.error{display:block;background:#ffebee;color:#c62828;border:1px solid #ffcdd2}
+.import-status.info{display:block;background:#e3f2fd;color:#1565c0;border:1px solid #bbdefb}
+/* MANAGE — compact single-row layout */
+.manage-section{margin-top:36px;padding-top:28px;border-top:2px solid var(--border)}
+.manage-section h2{font-family:var(--font-heading);font-size:1.2rem;margin-bottom:16px}
+.manage-item{background:var(--white);border:1px solid var(--border-light);border-radius:6px;margin-bottom:5px;overflow:hidden;transition:border-color .15s}
+.manage-item:hover{border-color:var(--border)}
+.mi-row{display:flex;align-items:center;gap:10px;padding:8px 12px;cursor:pointer}
+.mi-thumb{width:86px;height:60px;border-radius:4px;overflow:hidden;background:#eee;display:flex;align-items:center;justify-content:center;font-size:1.6rem;flex-shrink:0}
+.mi-thumb img{width:100%;height:100%;object-fit:cover}
+.mi-body{flex:1;min-width:0;display:flex;align-items:center;gap:10px}
+.mi-text{flex:1;min-width:0}
+.mi-title{font-size:.82rem;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mi-meta{font-size:.7rem;color:var(--text-muted);margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mi-badges{display:flex;gap:3px;flex-shrink:0}
+.mi-badge{font-size:.62rem;padding:2px 6px;border-radius:3px;font-weight:600;white-space:nowrap}
+.mi-badge-yt{background:#fde8e8;color:#c0392b}
+.mi-badge-tt{background:#e3f2fd;color:#1565c0}
+.mi-badge-noyt{background:#fff3e0;color:#e65100}
+.mi-badge-clicks{background:#f0f0f0;color:var(--text-muted)}
+.mi-acts{display:flex;gap:4px;flex-shrink:0}
+.mi-act{width:50px;height:50px;border-radius:4px;border:1px solid var(--border-light);background:var(--white);display:flex;align-items:center;justify-content:center;font-size:1.3rem;cursor:pointer;transition:all .12s;color:var(--text-light)}
+.mi-act:hover{background:var(--bg);border-color:var(--border)}
+.mi-act.del{color:var(--accent)}
+.mi-act.del:hover{background:#fde8e8;border-color:#ffcdd2}
+.mi-expand{display:none;padding:0 12px 10px 108px}
+.mi-expand.open{display:flex;flex-direction:column;gap:6px}
+.mi-expand-sep{height:1px;background:var(--border-light);margin:0 12px 0 108px}
+.mi-exp-row{display:flex;align-items:center;gap:6px}
+.mi-exp-icon{font-size:.7rem;color:var(--text-muted);width:14px;text-align:center;flex-shrink:0}
+.mi-exp-input{flex:1;padding:5px 8px;border:1px solid var(--border-light);border-radius:4px;font-size:.78rem;font-family:var(--font-body);color:var(--text);outline:none;transition:border-color .15s}
+.mi-exp-input:focus{border-color:var(--text-muted)}
+.mi-exp-save{background:#6abf69;color:white;border:none;padding:5px 10px;border-radius:4px;font-size:.75rem;font-weight:600;cursor:pointer;font-family:var(--font-body);transition:background .12s}
+.mi-exp-save:hover{background:#5aad5c}
+.btn-delete{background:var(--accent);color:white;border:none;padding:6px 14px;border-radius:4px;font-size:.8rem;font-weight:600;cursor:pointer;font-family:var(--font-body);transition:background .2s}
+.btn-delete:hover{background:var(--accent-hover)}
+footer{background:var(--white);border-top:1px solid var(--border);padding:20px 24px;text-align:center}
+.footer-inner{max-width:900px;margin:0 auto;font-size:.8rem;color:var(--text-muted)}
+.footer-inner a{color:var(--text-muted);text-decoration:none;margin:0 8px}
+.footer-inner a:hover{color:var(--text)}
+.footer-icons{display:flex;justify-content:center;gap:16px;margin-bottom:10px}
+.footer-icons a{display:flex;margin:0}
+.footer-icons svg{width:20px;height:20px;fill:currentColor}
+@media(max-width:768px){.recipe-thumb{width:120px;height:90px}.header-search{max-width:220px}}
+.rd-nav-mobile{display:none}
+.rd-nav-desktop{display:block}
+@media(max-width:640px){.rd-header{flex-direction:column-reverse}.rd-image-col{width:100%}.recipe-thumb{width:90px;height:68px}.rd-servings{float:none;margin-bottom:20px}.header-inner{padding:12px 16px;flex-wrap:wrap;gap:10px}.header-search{max-width:100%;order:10;flex-basis:100%}.main{padding:0 16px}.recipe-item{gap:14px}.rd-title-area{height:auto}.rd-nav-thumb{display:none}.rd-nav-mobile{display:block}.rd-nav-desktop{display:none}.mi-badges{display:none}.mi-body{gap:6px}.mi-expand{padding-left:12px}.mi-expand-sep{margin-left:12px}}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.recipe-detail.active{animation:fadeIn .3s ease-out}
+.recipe-item{animation:fadeIn .35s ease-out both}
+</style>
+</head>
+<body>
+<header><div class="header-inner"><a class="logo" onclick="showList()"><img src="https://www.axcooking.com/Portals/_default/skins/axcooking/images/logo.svg" alt="AXCOOKING"></a><div class="header-search"><input type="text" id="searchInput" placeholder="Suche nach Rezept oder Kategorie" oninput="onSearchInput()"><button class="search-clear" id="searchClear" onclick="clearSearch()">✕</button></div><div class="header-right"><div class="header-icons"><a href="https://www.youtube.com/@axcooking" target="_blank" title="YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2s-.2-1.6-.9-2.3c-.9-.9-1.8-.9-2.3-1C17 2.6 12 2.6 12 2.6s-5 0-8.3.3c-.5.1-1.4.1-2.3 1-.7.7-.9 2.3-.9 2.3S.2 8.1.2 10v1.8c0 1.9.3 3.8.3 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.6.2 7.6.2s5 0 8.3-.3c.5-.1 1.4-.1 2.3-1 .7-.7.9-2.3.9-2.3s.3-1.9.3-3.8V10c0-1.9-.3-3.8-.3-3.8zM9.5 15.6V8.1l6.3 3.7-6.3 3.8z"/></svg></a><a href="https://www.tiktok.com/@axcooking" target="_blank" title="TikTok"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1 0-5.78c.27 0 .54.04.8.1v-3.5a6.37 6.37 0 0 0-.8-.05A6.34 6.34 0 0 0 3.15 15.3 6.34 6.34 0 0 0 9.49 21.6a6.34 6.34 0 0 0 6.34-6.34V8.79a8.22 8.22 0 0 0 3.76 1.27V6.69z"/></svg></a></div><div class="lang-switch"><button class="active" onclick="setLang('de',this)">DE</button><button onclick="setLang('en',this)">EN</button></div><button class="lock-icon" onclick="handleAuthClick()" id="authBtn" title="Login">🔒</button></div></div></header>
+<div class="login-overlay" id="loginOverlay" onclick="if(event.target===this)closeLogin()"><div class="login-box"><h3>Admin Login</h3><div class="login-hint">Gib deinen GitHub Personal Access Token ein. Dieser wird nur lokal im Browser gespeichert und nie an Dritte übermittelt.</div><label>GitHub Token</label><input type="password" id="loginToken" placeholder="ghp_xxxxxxxxxxxx" onkeydown="if(event.key==='Enter')doLogin()"><div class="login-error" id="loginError">Token ungültig — bitte prüfen</div><div class="login-btns"><button class="btn-cancel" onclick="closeLogin()">Abbrechen</button><button class="btn-login" onclick="doLogin()">Anmelden</button></div></div></div>
+<div class="nav-tabs"><div class="nav-tabs-inner"><a class="nav-tab active" onclick="showList()" id="tabRecipes">Rezepte</a><a class="nav-tab hidden" onclick="showImport()" id="tabImport">Admin</a></div></div>
+<div class="main">
+  <div class="recipe-list" id="recipeList"><div class="loading" id="loadingMsg">Rezepte werden geladen</div><div id="recipeGrid"></div></div>
+  <div class="recipe-detail" id="recipeDetail"></div>
+  <div class="import-panel" id="importPanel">
+    <h2 id="importTitle">Rezept importieren</h2>
+    <div style="display:flex;gap:16px;align-items:stretch;margin-bottom:20px">
+      <div style="flex:0 0 38%;display:flex;flex-direction:column">
+        <p class="import-desc" id="importDesc" style="margin-bottom:12px">Lade eine oder mehrere Excel-Rezepte hoch.</p>
+        <div class="drop-zone" id="dropZone" onclick="document.getElementById('fileInput').click()" style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;margin-bottom:0"><div class="drop-zone-icon">📄</div><div class="drop-zone-text"><strong>Klicke hier</strong> oder ziehe Excel-Dateien hierher</div><input type="file" id="fileInput" accept=".xlsx,.xlsm" multiple onchange="handleFiles(this.files)"></div>
+      </div>
+      <div style="flex:1;display:flex;flex-direction:column">
+        <h3 style="font-family:var(--font-heading);font-size:1rem;margin-bottom:12px;color:var(--text-light)">Debug Log</h3>
+        <pre id="debugPanel" style="display:none;background:#1a1a1a;color:#0f0;padding:12px;border-radius:6px;font-size:.75rem;overflow-y:auto;font-family:monospace;white-space:pre-wrap;flex:1"></pre>
+      </div>
+    </div>
+    <div class="import-status" id="importStatus"></div>
+    <div class="manage-section">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px"><h2 id="manageTitle" style="margin-bottom:0">Rezepte verwalten</h2><div style="display:flex;gap:8px"><button onclick="resetAllClicks()" id="resetClicksBtn" style="display:none;background:var(--blue);color:white;border:none;padding:6px 14px;border-radius:4px;font-size:.8rem;font-weight:600;cursor:pointer;font-family:var(--font-body)">↺ Reset Clicks</button><button class="btn-delete" onclick="deleteAllRecipes()" id="deleteAllBtn" style="display:none">🗑 Alle löschen</button></div></div>
+      <div id="manageList"></div>
+    </div>
+  </div>
+</div>
+<footer><div class="footer-inner"><div class="footer-icons"><a href="https://www.youtube.com/@axcooking" target="_blank" title="YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2s-.2-1.6-.9-2.3c-.9-.9-1.8-.9-2.3-1C17 2.6 12 2.6 12 2.6s-5 0-8.3.3c-.5.1-1.4.1-2.3 1-.7.7-.9 2.3-.9 2.3S.2 8.1.2 10v1.8c0 1.9.3 3.8.3 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.6.2 7.6.2s5 0 8.3-.3c.5-.1 1.4-.1 2.3-1 .7-.7.9-2.3.9-2.3s.3-1.9.3-3.8V10c0-1.9-.3-3.8-.3-3.8zM9.5 15.6V8.1l6.3 3.7-6.3 3.8z"/></svg></a><a href="https://www.tiktok.com/@axcooking" target="_blank" title="TikTok"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1 0-5.78c.27 0 .54.04.8.1v-3.5a6.37 6.37 0 0 0-.8-.05A6.34 6.34 0 0 0 3.15 15.3 6.34 6.34 0 0 0 9.49 21.6a6.34 6.34 0 0 0 6.34-6.34V8.79a8.22 8.22 0 0 0 3.76 1.27V6.69z"/></svg></a></div><a href="#">Datenschutz</a><div style="margin-top:6px">© 2026 AxCooking. simple and delicious.</div></div></footer>
+<script>
+const GH_OWNER='AxCooking',GH_REPO='AxCooking',GH_BRANCH='main',GH_API='https://api.github.com';
+let lang='de',ghToken=null,loggedIn=false,recipes=[],stats={},currentRecipeId=null,cachedNavList=null;
+const L={de:{search:'Suche nach Rezept oder Kategorie',recipes:'Rezepte',import:'Admin',back:'← Zurück zur Übersicht',cookingTitle:'Kochanleitung',servingsLabel:'Zutaten für',servingsUnit:'Personen',difficulty:'Schwierigkeit',totalTime:'Total Zeit',workTime:'Arbeitszeit',cookTime:'Kochzeit',importTitle:'Rezept importieren',importDesc:'Lade eine oder mehrere Excel-Rezepte hoch.',dropText:'<strong>Klicke hier</strong> oder ziehe Excel-Dateien hierher',steps:'Schritte',datenschutz:'Datenschutz',noResults:'Keine Rezepte gefunden',logout:'Abmelden',login:'Anmelden',manageTitle:'Rezepte verwalten',deleteBtn:'Löschen',deleteConfirm:'Rezept wirklich löschen?',deleted:'wurde gelöscht',noRecipes:'Noch keine Rezepte vorhanden',saving:'Wird auf GitHub gespeichert…',saved:'Auf GitHub gespeichert!',loadError:'Fehler beim Laden der Rezepte'},en:{search:'Search for recipe or category',recipes:'Recipes',import:'Admin',back:'← Back to overview',cookingTitle:'Cooking Instructions',servingsLabel:'Ingredients for',servingsUnit:'people',difficulty:'Difficulty',totalTime:'Total Time',workTime:'Working Time',cookTime:'Cooking Time',importTitle:'Import recipe',importDesc:'Upload one or multiple Excel recipes.',dropText:'<strong>Click here</strong> or drag Excel files here',steps:'Steps',datenschutz:'Privacy',noResults:'No recipes found',logout:'Logout',login:'Login',manageTitle:'Manage recipes',deleteBtn:'Delete',deleteConfirm:'Really delete this recipe?',deleted:'was deleted',noRecipes:'No recipes yet',saving:'Saving to GitHub…',saved:'Saved to GitHub!',loadError:'Error loading recipes'}};
+function t(k){return L[lang][k]||k}
+function utf8ToBase64(str){const bytes=new TextEncoder().encode(str);let binary='';for(let i=0;i<bytes.length;i++)binary+=String.fromCharCode(bytes[i]);return btoa(binary)}
+function base64ToUtf8(b64){const binary=atob(b64);const bytes=new Uint8Array(binary.length);for(let i=0;i<binary.length;i++)bytes[i]=binary.charCodeAt(i);return new TextDecoder().decode(bytes)}
+let debugLog=[];
+function dbg(msg){const ts=new Date().toLocaleTimeString();debugLog.push(`[${ts}] ${msg}`);console.log(`[GH-DEBUG] ${msg}`);const el=document.getElementById('debugPanel');if(el){el.textContent=debugLog.slice(-15).join('\n');el.style.display='block'}}
+const shaCache={};
+async function ghGet(path){const url=`${GH_API}/repos/${GH_OWNER}/${GH_REPO}/contents/${path}?ref=${GH_BRANCH}`;const headers={'Accept':'application/vnd.github.v3+json'};if(ghToken)headers['Authorization']='token '+ghToken;try{dbg(`GET ${path}...`);const r=await fetch(url,{headers,cache:'no-store'});dbg(`GET ${path} → ${r.status}`);if(!r.ok)return null;const data=await r.json();if(data&&data.sha){shaCache[path]=data.sha;dbg(`GET ${path} SHA=${data.sha.substring(0,8)}...`)}return data}catch(e){dbg(`GET ${path} ERROR: ${e.message}`);return null}}
+let lastGhError='';
+async function ghPut(path,content,message,retries=3){const b64=utf8ToBase64(content);dbg(`PUT ${path} (${b64.length} bytes base64)`);for(let attempt=1;attempt<=retries;attempt++){try{let sha=shaCache[path];if(!sha){dbg(`PUT ${path} attempt ${attempt}: no cached SHA, fetching...`);const existing=await ghGet(path);sha=existing?.sha||null}dbg(`PUT ${path} attempt ${attempt}: SHA=${sha?sha.substring(0,8)+'...':'NONE'}`);const body={message,content:b64,branch:GH_BRANCH};if(sha)body.sha=sha;const r=await fetch(`${GH_API}/repos/${GH_OWNER}/${GH_REPO}/contents/${path}`,{method:'PUT',headers:{'Accept':'application/vnd.github.v3+json','Authorization':'token '+ghToken,'Content-Type':'application/json'},body:JSON.stringify(body)});dbg(`PUT ${path} attempt ${attempt}: HTTP ${r.status}`);if(r.ok||r.status===201){const result=await r.json();if(result?.content?.sha){shaCache[path]=result.content.sha;dbg(`PUT ${path} SUCCESS, new SHA=${result.content.sha.substring(0,8)}...`)}return true}const errBody=await r.json().catch(()=>({}));const errMsg=errBody.message||'';dbg(`PUT ${path} FAILED: ${r.status} — ${errMsg}`);if((r.status===409||r.status===422)&&attempt<retries){delete shaCache[path];dbg(`SHA conflict, waiting ${2000*attempt}ms...`);await new Promise(res=>setTimeout(res,2000*attempt));continue}lastGhError=`HTTP ${r.status}: ${errMsg}`;return false}catch(e){dbg(`PUT ${path} EXCEPTION: ${e.message}`);lastGhError=e.message;if(attempt<retries){await new Promise(res=>setTimeout(res,2000*attempt));continue}return false}}return false}
+async function ghPutBinary(path,base64Data,message,retries=3){dbg(`PUT-BIN ${path} (${base64Data.length} bytes)`);for(let attempt=1;attempt<=retries;attempt++){try{let sha=shaCache[path];if(!sha){const existing=await ghGet(path);sha=existing?.sha||null}const body={message,content:base64Data,branch:GH_BRANCH};if(sha)body.sha=sha;const r=await fetch(`${GH_API}/repos/${GH_OWNER}/${GH_REPO}/contents/${path}`,{method:'PUT',headers:{'Accept':'application/vnd.github.v3+json','Authorization':'token '+ghToken,'Content-Type':'application/json'},body:JSON.stringify(body)});dbg(`PUT-BIN ${path}: HTTP ${r.status}`);if(r.ok||r.status===201){const result=await r.json();if(result?.content?.sha)shaCache[path]=result.content.sha;return true}if((r.status===409||r.status===422)&&attempt<retries){delete shaCache[path];await new Promise(res=>setTimeout(res,2000*attempt));continue}return false}catch(e){dbg(`PUT-BIN ${path} ERROR: ${e.message}`);if(attempt<retries){await new Promise(res=>setTimeout(res,2000*attempt));continue}return false}}return false}
+async function ghDelete(path,message){try{let sha=shaCache[path];if(!sha){const existing=await ghGet(path);sha=existing?.sha||null}if(!sha)return true;dbg(`DELETE ${path} SHA=${sha.substring(0,8)}...`);const r=await fetch(`${GH_API}/repos/${GH_OWNER}/${GH_REPO}/contents/${path}`,{method:'DELETE',headers:{'Accept':'application/vnd.github.v3+json','Authorization':'token '+ghToken,'Content-Type':'application/json'},body:JSON.stringify({message,sha,branch:GH_BRANCH})});dbg(`DELETE ${path}: HTTP ${r.status}`);if(r.ok)delete shaCache[path];return r.ok}catch(e){dbg(`DELETE ${path} ERROR: ${e.message}`);return false}}
+async function loadRecipes(){document.getElementById('loadingMsg').style.display='block';try{const data=await ghGet('data/recipes.json');if(data&&data.content)recipes=JSON.parse(base64ToUtf8(data.content.replace(/\n/g,'')))}catch(e){console.warn('Could not load recipes:',e)}try{const data=await ghGet('data/stats.json');if(data&&data.content)stats=JSON.parse(base64ToUtf8(data.content.replace(/\n/g,'')))}catch(e){console.warn('Could not load stats:',e)}document.getElementById('loadingMsg').style.display='none';renderList()}
+async function saveRecipes(){const toSave=recipes.map(r=>{const copy={...r};delete copy.image;return copy});return ghPut('data/recipes.json',JSON.stringify(toSave,null,2),'Update recipes')}
+async function saveStats(){return ghPut('data/stats.json',JSON.stringify(stats,null,2),'Update stats')}
+async function saveImage(recipeId,dataUrl){const base64=dataUrl.split(',')[1];const ext=dataUrl.includes('image/png')?'png':'jpg';return ghPutBinary(`images/${recipeId}.${ext}`,base64,`Add image for ${recipeId}`)}
+function getImageUrl(recipeId){return`https://raw.githubusercontent.com/${GH_OWNER}/${GH_REPO}/${GH_BRANCH}/images/${recipeId}.jpg`}
+function handleAuthClick(){if(loggedIn){loggedIn=false;ghToken=null;sessionStorage.removeItem('gh_token');document.getElementById('tabImport').classList.add('hidden');document.getElementById('authBtn').innerHTML='🔒';if(document.getElementById('importPanel').classList.contains('active'))showList();renderList()}else{document.getElementById('loginOverlay').classList.add('open');document.getElementById('loginToken').focus()}}
+function closeLogin(){document.getElementById('loginOverlay').classList.remove('open');document.getElementById('loginError').style.display='none';document.getElementById('loginToken').value=''}
+async function doLogin(){const token=document.getElementById('loginToken').value.trim();if(!token){document.getElementById('loginError').style.display='block';return}try{const r=await fetch(`${GH_API}/repos/${GH_OWNER}/${GH_REPO}`,{headers:{'Authorization':'token '+token,'Accept':'application/vnd.github.v3+json'}});if(!r.ok)throw new Error();const repo=await r.json();if(!repo.permissions||!repo.permissions.push){document.getElementById('loginError').textContent='Token hat keine Schreibrechte';document.getElementById('loginError').style.display='block';return}}catch(e){document.getElementById('loginError').style.display='block';return}ghToken=token;loggedIn=true;sessionStorage.setItem('gh_token',token);closeLogin();document.getElementById('tabImport').classList.remove('hidden');document.getElementById('authBtn').innerHTML='🔓 '+t('logout');renderList()}
+function toSlug(s){return s.toLowerCase().replace(/ä/g,'ae').replace(/ö/g,'oe').replace(/ü/g,'ue').replace(/ß/g,'ss').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')}
+function makeHash(id){const r=recipes.find(x=>x.id===id);if(!r)return'#';return'#/'+lang+'/recipe/'+toSlug(lang==='de'?r.title_de:r.title_en)}
+function findRecipeBySlug(slug){return recipes.find(r=>toSlug(r.title_de)===slug||toSlug(r.title_en)===slug)}
+function getSortedFilteredRecipes(){const q=document.getElementById('searchInput').value.toLowerCase().trim();let filtered=recipes.filter(r=>{const title=lang==='de'?r.title_de:r.title_en;const desc=lang==='de'?r.desc_de:r.desc_en;const tags=(lang==='de'?r.tags_de:r.tags_en)||[];return!q||(title+' '+desc+' '+tags.join(' ')).toLowerCase().includes(q)});filtered.sort((a,b)=>{const ca=(stats[a.id]||0),cb=(stats[b.id]||0);if(cb!==ca)return cb-ca;return(lang==='de'?a.title_de:a.title_en).localeCompare(lang==='de'?b.title_de:b.title_en,lang)});return filtered}
+function renderList(){const grid=document.getElementById('recipeGrid');const filtered=getSortedFilteredRecipes();if(!filtered.length){grid.innerHTML=`<div style="text-align:center;padding:40px;color:var(--text-muted)">${t('noResults')}</div>`;return}grid.innerHTML=filtered.map((r,i)=>{const title=lang==='de'?r.title_de:r.title_en;const desc=lang==='de'?r.desc_de:r.desc_en;const tags=(lang==='de'?r.tags_de:r.tags_en)||[];const clicks=stats[r.id]||0;const clickBadge=loggedIn?`<span class="recipe-tag" style="background:#e3f2fd;color:#1565c0">👁 ${clicks}</span>`:'';const imgSrc=r.image||getImageUrl(r.id);const ytFb=r.youtubeId?`https://img.youtube.com/vi/${r.youtubeId}/mqdefault.jpg`:'';return`<div class="recipe-item" style="animation-delay:${i*.05}s" onclick="showRecipe('${r.id}')"><div class="recipe-thumb"><img src="${imgSrc}" alt="${title}" onerror="if('${ytFb}')this.src='${ytFb}';else this.parentElement.innerHTML='${r.emoji||'🍽'}'"></div><div class="recipe-info"><h3>${title}</h3><p>${desc}</p><div class="recipe-tags">${clickBadge}${tags.map(t=>`<span class="recipe-tag">${t}</span>`).join('')}</div></div></div>`}).join('')}
+function renderDetail(id){const r=recipes.find(x=>x.id===id);if(!r)return;currentRecipeId=id;const title=lang==='de'?r.title_de:r.title_en;const desc=lang==='de'?r.desc_de:r.desc_en;const diff=lang==='de'?r.difficulty_de:r.difficulty_en;const steps=lang==='de'?r.steps_de:r.steps_en;const tags=(lang==='de'?r.tags_de:r.tags_en)||[];const hasYt=!!r.youtubeId;const imgSrc=r.image||getImageUrl(r.id);const ytFallback=hasYt?`https://img.youtube.com/vi/${r.youtubeId}/hqdefault.jpg`:'';const imageClick=hasYt?`onclick="window.open('${r.youtubeUrl}','_blank')" style="cursor:pointer"`:'';const sorted=cachedNavList||getSortedFilteredRecipes();const idx=sorted.findIndex(x=>x.id===id);const prevIdx=idx>0?idx-1:sorted.length-1;const nextIdx=idx<sorted.length-1?idx+1:0;const prev=sorted.length>1?sorted[prevIdx]:null;const next=sorted.length>1?sorted[nextIdx]:null;const prevTitle=prev?(lang==='de'?prev.title_de:prev.title_en):'';const nextTitle=next?(lang==='de'?next.title_de:next.title_en):'';const prevImg=prev?(prev.image||getImageUrl(prev.id)):'';const prevYtFb=prev&&prev.youtubeId?`https://img.youtube.com/vi/${prev.youtubeId}/default.jpg`:'';const nextImg=next?(next.image||getImageUrl(next.id)):'';const nextYtFb=next&&next.youtubeId?`https://img.youtube.com/vi/${next.youtubeId}/default.jpg`:'';const navHtml=sorted.length>1?`<div class="rd-nav"><a class="rd-nav-btn" onclick="showRecipe('${prev.id}')"><span class="rd-nav-arrow left"></span><div class="rd-nav-thumb"><img src="${prevImg}" onerror="if('${prevYtFb}')this.src='${prevYtFb}';else this.parentElement.style.display='none'"></div><div class="rd-nav-title">${prevTitle}</div></a><a class="rd-nav-btn next" onclick="showRecipe('${next.id}')"><div class="rd-nav-title">${nextTitle}</div><div class="rd-nav-thumb"><img src="${nextImg}" onerror="if('${nextYtFb}')this.src='${nextYtFb}';else this.parentElement.style.display='none'"></div><span class="rd-nav-arrow right"></span></a></div>`:`<div class="rd-nav" style="visibility:hidden"><a class="rd-nav-btn"><span class="rd-nav-arrow left"></span><div class="rd-nav-title">&nbsp;</div></a><a class="rd-nav-btn next"><div class="rd-nav-title">&nbsp;</div><span class="rd-nav-arrow right"></span></a></div>`;const hasTt=!!r.tiktokUrl;const linksHtml=`<div class="rd-yt-link" style="min-height:1.6em;display:flex;gap:16px;align-items:center;margin-top:6px">${hasYt?`<a href="${r.youtubeUrl}" target="_blank" style="color:var(--blue);text-decoration:none;font-size:.8rem">▶ YouTube</a>`:'<span>&nbsp;</span>'}${hasTt?`<a href="${r.tiktokUrl}" target="_blank" style="color:var(--blue);text-decoration:none;font-size:.8rem">♪ TikTok</a>`:''}</div>`;const imageCol=`<div class="rd-image-col"><img src="${imgSrc}" alt="${title}" ${imageClick} onerror="if('${ytFallback}')this.src='${ytFallback}';else this.style.display='none'">${linksHtml}<div class="rd-nav-mobile">${navHtml}</div></div>`;document.getElementById('recipeDetail').innerHTML=`<a class="rd-back" onclick="showList()">${t('back')}</a><div class="rd-nav-desktop">${navHtml}</div><div class="rd-header"><div class="rd-header-text"><div class="rd-title-area"><h1>${title}</h1></div><div class="rd-meta">${diff?`<div class="rd-meta-item"><span class="rd-meta-icon"><svg viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></span><span class="rd-meta-label">${t('difficulty')}</span><span class="rd-meta-value">${diff}</span></div>`:''}${r.totalTime&&r.totalTime!=='0m'?`<div class="rd-meta-item"><span class="rd-meta-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><span class="rd-meta-label">${t('totalTime')}</span><span class="rd-meta-value">${r.totalTime}</span></div>`:''}${r.workTime&&r.workTime!=='0m'?`<div class="rd-meta-item"><span class="rd-meta-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 8 14"/><path d="M22 2L20 4M2 2l2 2"/></svg></span><span class="rd-meta-label">${t('workTime')}</span><span class="rd-meta-value">${r.workTime}</span></div>`:''}${r.cookTime&&r.cookTime!=='0m'?`<div class="rd-meta-item"><span class="rd-meta-icon"><svg viewBox="0 0 24 24"><path d="M12 2c0 4-4 6-4 10a4 4 0 0 0 8 0c0-4-4-6-4-10z"/><path d="M5 22h14M7 22v-2a5 5 0 0 1 10 0v2"/></svg></span><span class="rd-meta-label">${t('cookTime')}</span><span class="rd-meta-value">${r.cookTime}</span></div>`:''}</div><div class="recipe-tags" style="margin-bottom:0">${tags.map(t=>`<span class="recipe-tag">${t}</span>`).join('')}</div></div>${imageCol}</div><div class="rd-desc-full">${desc}</div><div style="overflow:hidden"><div class="rd-servings"><label>${t('servingsLabel')}</label><input type="number" id="servingsInput" value="${r.baseServings}" min="1" max="100" onchange="updateServings('${r.id}')"><span>${lang==='de'?(r.servingsUnit_de||t('servingsUnit')):(r.servingsUnit_en||t('servingsUnit'))}</span></div><h2 class="rd-cooking-title">${t('cookingTitle')}</h2></div><div id="stepsContainer"></div>`;renderSteps(r,steps,r.baseServings)}
+function renderSteps(recipe,steps,servings){const ratio=servings/recipe.baseServings;document.getElementById('stepsContainer').innerHTML=steps.map((s,i)=>`<div class="step"><div class="step-header"><span class="step-num">${i+1}</span><h2>${s.title}</h2></div>${s.ingredients.map(ing=>{const sc=Math.round(ing.amount*ratio*10)/10;return`<div class="ingredient-row"><span class="ing-amount">${sc%1===0?sc:sc.toFixed(1)}</span><span class="ing-unit">${ing.unit}</span><span class="ing-name">${ing.name}</span></div>`}).join('')}<div class="step-text">${s.text}</div></div>`).join('')}
+function updateServings(id){const r=recipes.find(x=>x.id===id);if(!r)return;renderSteps(r,lang==='de'?r.steps_de:r.steps_en,parseInt(document.getElementById('servingsInput').value)||r.baseServings)}
+function showList(){currentRecipeId=null;cachedNavList=null;document.getElementById('recipeList').classList.remove('hidden');document.getElementById('recipeDetail').classList.remove('active');document.getElementById('recipeDetail').style.display='none';document.getElementById('importPanel').classList.remove('active');document.getElementById('tabRecipes').classList.add('active');document.getElementById('tabImport').classList.remove('active');renderList();history.pushState(null,null,'#/'+lang);window.scrollTo({top:0,behavior:'smooth'})}
+async function showRecipe(id){if(!cachedNavList||!currentRecipeId)cachedNavList=getSortedFilteredRecipes();stats[id]=(stats[id]||0)+1;if(ghToken)saveStats().catch(()=>{});document.getElementById('recipeList').classList.add('hidden');document.getElementById('importPanel').classList.remove('active');const d=document.getElementById('recipeDetail');d.style.display='block';d.classList.add('active');renderDetail(id);history.pushState(null,null,makeHash(id));window.scrollTo({top:0,behavior:'smooth'})}
+function showImport(){if(!loggedIn)return;document.getElementById('recipeList').classList.add('hidden');document.getElementById('recipeDetail').classList.remove('active');document.getElementById('recipeDetail').style.display='none';document.getElementById('importPanel').classList.add('active');document.getElementById('tabRecipes').classList.remove('active');document.getElementById('tabImport').classList.add('active');updateImportLabels();renderManageList();window.scrollTo({top:0,behavior:'smooth'})}
+function onSearchInput(){const val=document.getElementById('searchInput').value;document.getElementById('searchClear').style.display=val?'block':'none';renderList();if(document.getElementById('importPanel').classList.contains('active'))renderManageList()}
+function clearSearch(){document.getElementById('searchInput').value='';document.getElementById('searchClear').style.display='none';renderList();if(document.getElementById('importPanel').classList.contains('active'))renderManageList()}
+function setLang(l,btn){lang=l;document.querySelectorAll('.lang-switch button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.getElementById('searchInput').placeholder=t('search');document.getElementById('tabRecipes').textContent=t('recipes');document.getElementById('tabImport').textContent=t('import');if(loggedIn)document.getElementById('authBtn').innerHTML='🔓 '+t('logout');updateImportLabels();if(currentRecipeId){renderDetail(currentRecipeId);history.replaceState(null,null,makeHash(currentRecipeId))}else{renderList();history.replaceState(null,null,'#/'+lang)}}
+function updateImportLabels(){document.getElementById('importTitle').textContent=t('importTitle');document.getElementById('importDesc').textContent=t('importDesc');document.querySelector('.drop-zone-text').innerHTML=t('dropText');document.getElementById('manageTitle').textContent=t('manageTitle')}
+const dropZone=document.getElementById('dropZone');dropZone.addEventListener('dragover',e=>{e.preventDefault();dropZone.classList.add('dragover')});dropZone.addEventListener('dragleave',()=>dropZone.classList.remove('dragover'));dropZone.addEventListener('drop',e=>{e.preventDefault();dropZone.classList.remove('dragover');if(e.dataTransfer.files.length)handleFiles(e.dataTransfer.files)});
+async function handleFiles(fileList){if(!fileList||!fileList.length)return;const files=Array.from(fileList).filter(f=>f.name.match(/\.xlsx?m?$/i));if(!files.length){showStatus('error','Keine gültigen Excel-Dateien.');return}let imported=0,errors=[];for(let i=0;i<files.length;i++){const file=files[i];showStatus('info',`Verarbeite Datei ${i+1} von ${files.length}: ${file.name}…`);try{const arrayBuffer=await readFileAsArrayBuffer(file);const wb=XLSX.read(new Uint8Array(arrayBuffer),{type:'array',cellNF:true});if(!wb.SheetNames.includes('Rezept DE')){errors.push(file.name+': Blatt "Rezept DE" fehlt')}else{const recipe=parseRecipe(wb);const idx=recipes.findIndex(r=>r.id===recipe.id);if(idx>=0)recipes[idx]=recipe;else recipes.push(recipe);imported++}}catch(err){errors.push(file.name+': '+err.message)}}if(imported>0){showStatus('info',`${imported} Rezept(e) werden auf GitHub gespeichert… (${recipes.length} total, bitte warten)`);try{const ok=await saveRecipes();if(ok){showStatus('success',`✓ ${imported} Rezept(e) ${t('saved')} (${recipes.length} total)${errors.length?' — '+errors.length+' Fehler: '+errors.join(', '):''}`)}else{showStatus('error','Fehler beim Speichern: '+(lastGhError||'unbekannt'));return}}catch(e){showStatus('error','Fehler: '+e.message);return}}else{showStatus('error','Import fehlgeschlagen:\n'+errors.join('\n'))}renderManageList();document.getElementById('fileInput').value=''}
+function readFileAsArrayBuffer(file){return new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=()=>reject(new Error('Datei konnte nicht gelesen werden'));reader.readAsArrayBuffer(file)})}
+function parseRecipe(wb){const wsDE=XLSX.utils.sheet_to_json(wb.Sheets['Rezept DE'],{header:1,defval:''});const hasEN=wb.SheetNames.includes('Rezept EN');const wsEN=hasEN?XLSX.utils.sheet_to_json(wb.Sheets['Rezept EN'],{header:1,defval:''}):null;const tagMap={};if(wb.SheetNames.includes('MASTER')){const wsMaster=XLSX.utils.sheet_to_json(wb.Sheets['MASTER'],{header:1,defval:''});for(let i=2;i<wsMaster.length;i++){const row=wsMaster[i];const de=row[8]?String(row[8]).trim():'';const en=row[9]?String(row[9]).trim():'';if(de&&en)tagMap[de]=en}dbg(`Tag translation map: ${Object.keys(tagMap).length} entries`)}const title_de=wsDE[0]?.[0]||'Unbekannt',desc_de=wsDE[1]?.[3]||'';const title_en=wsEN?(wsEN[0]?.[0]||title_de):title_de,desc_en=wsEN?(wsEN[1]?.[3]||desc_de):desc_de;const difficulty_de=wsDE[13]?.[5]||'',youtubeUrl=wsDE[12]?.[9]||'',youtubeId=youtubeUrl.match(/[?&]v=([^&]+)/)?.[1]||'';const tags_de=[wsDE[1]?.[7],wsDE[1]?.[8],wsDE[1]?.[9],wsDE[10]?.[7]].filter(Boolean);const tags_en=tags_de.map(tag=>tagMap[tag]||tag);const baseServings=wsDE[18]?.[1]||10;const wt=fmtTime(wsDE[1]?.[5]),ct=fmtTime(wsDE[4]?.[5]),rt=fmtTime(wsDE[7]?.[5]);const difficulty_en=difficulty_de==='einfach'?'simple':difficulty_de==='normal'?'normal':difficulty_de==='herausfordernd'?'challenging':difficulty_de;const servingsUnit_de=extractServingsUnit(wb.Sheets['Rezept DE'],'B19')||'Personen';const servingsUnit_en=hasEN?extractServingsUnit(wb.Sheets['Rezept EN'],'B19')||'people':'people';return{id:toSlug(title_de),title_de,title_en,desc_de,desc_en,difficulty_de,difficulty_en,workTime:wt,cookTime:ct,restTime:rt,totalTime:addT(wt,ct,rt),youtubeId,youtubeUrl,tiktokUrl:'',tags_de,tags_en,baseServings:parseInt(baseServings)||10,servingsUnit_de,servingsUnit_en,emoji:'🍽',steps_de:parseSteps(wsDE,wb.Sheets['Rezept DE']),steps_en:wsEN?parseSteps(wsEN,wb.Sheets['Rezept EN']):parseSteps(wsDE,wb.Sheets['Rezept DE'])}}
+function extractServingsUnit(sheet,cellRef){try{const cell=sheet[cellRef];if(!cell||!cell.z)return null;const fmt=cell.z;const matches=fmt.match(/"([^"]+)"/g);if(matches&&matches.length>=2){return matches[matches.length-1].replace(/"/g,'')}}catch(e){}return null}
+function parseSteps(ws,sheet){const steps=[];let cur=null;for(let i=19;i<ws.length;i++){const row=ws[i];if(!row||(!row[0]&&!row[1]))continue;const a=row[0]?String(row[0]).trim():'',b=row[1]?String(row[1]).trim():'';if(a&&!b&&isNaN(parseFloat(a))){cur={title:a,ingredients:[],text:''};steps.push(cur);continue}if(a&&b&&!isNaN(parseFloat(a))){if(!cur){cur={title:'Zubereitung',ingredients:[],text:''};steps.push(cur)}let unit='gr';if(sheet){const cellRef=XLSX.utils.encode_cell({r:i,c:0});const cell=sheet[cellRef];if(cell&&cell.z){const m=cell.z.match(/"([^"]+)"\s*$/);if(m)unit=m[1]}}cur.ingredients.push({amount:parseFloat(a),unit:unit,name:b});continue}if(!a&&b&&b.length>30&&cur)cur.text=b}return steps}
+function fmtTime(v){if(!v)return'0m';if(typeof v==='number'){const m=Math.round(v*24*60);return m>=60?Math.floor(m/60)+'h '+m%60+'m':m+'m'}return String(v)}
+function addT(a,b,c){function m(s){let r=0;const h=s.match(/(\d+)h/),mm=s.match(/(\d+)m/);if(h)r+=parseInt(h[1])*60;if(mm)r+=parseInt(mm[1]);return r}const tot=m(a)+m(b)+m(c);return tot>=60?Math.floor(tot/60)+'h '+tot%60+'m':tot+'m'}
+function showStatus(type,msg){const s=document.getElementById('importStatus');s.className='import-status '+type;s.textContent=msg;s.style.display='block'}
+function optimizeImage(dataUrl,cb){const img=new Image();img.onload=function(){const tW=800,tH=450,canvas=document.createElement('canvas');canvas.width=tW;canvas.height=tH;const ctx=canvas.getContext('2d');const sR=img.width/img.height,tR=tW/tH;let sx=0,sy=0,sw=img.width,sh=img.height;if(sR>tR){sw=img.height*tR;sx=(img.width-sw)/2}else{sh=img.width/tR;sy=(img.height-sh)/2}ctx.drawImage(img,sx,sy,sw,sh,0,0,tW,tH);const d=ctx.getImageData(0,0,tW,tH).data;const id=ctx.getImageData(0,0,tW,tH);for(let i=0;i<d.length;i+=4){id.data[i]=Math.min(255,Math.max(0,(d[i]-128)*1.12+128+8));id.data[i+1]=Math.min(255,Math.max(0,(d[i+1]-128)*1.12+128+8));id.data[i+2]=Math.min(255,Math.max(0,(d[i+2]-128)*1.12+128+8))}ctx.putImageData(id,0,0);ctx.fillStyle='rgba(255,200,150,0.04)';ctx.fillRect(0,0,tW,tH);cb(canvas.toDataURL('image/jpeg',0.88))};img.src=dataUrl}
+
+// ═══════════════════════════════════════
+// MANAGE RECIPES — COMPACT LAYOUT
+// ═══════════════════════════════════════
+function renderManageList(){
+  const list=document.getElementById('manageList');
+  const delAllBtn=document.getElementById('deleteAllBtn');
+  const resetBtn=document.getElementById('resetClicksBtn');
+  if(!recipes.length){list.innerHTML=`<div style="padding:20px;text-align:center;color:var(--text-muted)">${t('noRecipes')}</div>`;if(delAllBtn)delAllBtn.style.display='none';if(resetBtn)resetBtn.style.display='none';return}
+  if(delAllBtn)delAllBtn.style.display='inline-block';
+  if(resetBtn)resetBtn.style.display='inline-block';
+  const sorted=getSortedFilteredRecipes();
+  if(!sorted.length){list.innerHTML=`<div style="padding:20px;text-align:center;color:var(--text-muted)">${t('noResults')}</div>`;return}
+  list.innerHTML=sorted.map(r=>{
+    const title=lang==='de'?r.title_de:r.title_en;
+    const imgSrc=getImageUrl(r.id);
+    const clicks=stats[r.id]||0;
+    const ytUrl=r.youtubeUrl||'';
+    const hasYt=!!ytUrl;
+    const hasTt=!!r.tiktokUrl;
+    const diff=lang==='de'?r.difficulty_de:r.difficulty_en;
+    const sUnit=lang==='de'?(r.servingsUnit_de||t('servingsUnit')):(r.servingsUnit_en||t('servingsUnit'));
+    const badges=(hasYt?'<span class="mi-badge mi-badge-yt">▶ YT</span>':'<span class="mi-badge mi-badge-noyt">⚠ kein YT</span>')+(hasTt?'<span class="mi-badge mi-badge-tt">♪ TT</span>':'')+'<span class="mi-badge mi-badge-clicks">👁 '+clicks+'</span>';
+    return`<div class="manage-item" id="mi-${r.id}">
+      <div class="mi-row" onclick="toggleManageExpand('${r.id}')">
+        <div class="mi-thumb"><img src="${imgSrc}" alt="" onerror="this.parentElement.innerHTML='${r.emoji||'🍽'}'"></div>
+        <div class="mi-body">
+          <div class="mi-text"><div class="mi-title">${title}</div><div class="mi-meta">${r.steps_de?.length||0} ${t('steps')} · ${r.baseServings} ${sUnit}${diff?' · '+diff:''}${r.totalTime&&r.totalTime!=='0m'?' · '+r.totalTime:''}</div></div>
+          <div class="mi-badges">${badges}</div>
+        </div>
+        <div class="mi-acts" onclick="event.stopPropagation()">
+          <label class="mi-act" title="Excel Update"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="16" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg><input type="file" accept=".xlsx,.xlsm" style="display:none" onchange="updateSingleRecipe('${r.id}',this.files[0])"></label>
+          <label class="mi-act" title="Bild"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><input type="file" accept="image/*" style="display:none" onchange="uploadManageImage('${r.id}',this.files[0])"></label>
+          <div class="mi-act del" title="${t('deleteBtn')}" onclick="deleteRecipe('${r.id}')"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></div>
+        </div>
+      </div>
+      <div class="mi-expand-sep" id="sep-${r.id}" style="display:none"></div>
+      <div class="mi-expand" id="exp-${r.id}">
+        <div class="mi-exp-row"><span class="mi-exp-icon">▶</span><input class="mi-exp-input" id="yt-${r.id}" value="${ytUrl}" placeholder="https://www.youtube.com/watch?v=..."><button class="mi-exp-save" onclick="saveYoutubeLink('${r.id}')">Speichern</button></div>
+        <div class="mi-exp-row"><span class="mi-exp-icon">♪</span><input class="mi-exp-input" id="tt-${r.id}" value="${r.tiktokUrl||''}" placeholder="https://www.tiktok.com/@axcooking/video/..."><button class="mi-exp-save" onclick="saveTiktokLink('${r.id}')">Speichern</button></div>
+      </div>
+    </div>`}).join('');
+}
+function toggleManageExpand(id){const exp=document.getElementById('exp-'+id);const sep=document.getElementById('sep-'+id);if(!exp)return;const isOpen=exp.classList.contains('open');document.querySelectorAll('.mi-expand.open').forEach(el=>el.classList.remove('open'));document.querySelectorAll('.mi-expand-sep').forEach(el=>el.style.display='none');if(!isOpen){exp.classList.add('open');if(sep)sep.style.display='block'}}
+async function saveYoutubeLink(recipeId){const r=recipes.find(x=>x.id===recipeId);if(!r)return;const input=document.getElementById('yt-'+recipeId);const url=input.value.trim();const ytMatch=url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/shorts\/)([^&?#]+)/);r.youtubeUrl=url;r.youtubeId=ytMatch?ytMatch[1]:'';showStatus('info',t('saving'));const ok=await saveRecipes();showStatus(ok?'success':'error',ok?`✓ YouTube-Link ${t('saved')}`:'Fehler beim Speichern');renderManageList()}
+async function saveTiktokLink(recipeId){const r=recipes.find(x=>x.id===recipeId);if(!r)return;const input=document.getElementById('tt-'+recipeId);r.tiktokUrl=input.value.trim();showStatus('info',t('saving'));const ok=await saveRecipes();showStatus(ok?'success':'error',ok?`✓ TikTok-Link ${t('saved')}`:'Fehler beim Speichern');renderManageList()}
+async function updateSingleRecipe(recipeId,file){if(!file)return;const existing=recipes.find(r=>r.id===recipeId);const existingTitle=existing?(lang==='de'?existing.title_de:existing.title_en):recipeId;showStatus('info',`📄 "${existingTitle}" wird aktualisiert…`);try{const arrayBuffer=await readFileAsArrayBuffer(file);const wb=XLSX.read(new Uint8Array(arrayBuffer),{type:'array',cellNF:true});if(!wb.SheetNames.includes('Rezept DE')){showStatus('error','Fehler: Blatt "Rezept DE" nicht gefunden.');return}const newRecipe=parseRecipe(wb);if(existing)newRecipe.id=existing.id;const idx=recipes.findIndex(r=>r.id===recipeId);if(idx>=0)recipes[idx]=newRecipe;else recipes.push(newRecipe);showStatus('info',`📄 "${existingTitle}" wird auf GitHub gespeichert…`);const ok=await saveRecipes();showStatus(ok?'success':'error',ok?`✓ "${existingTitle}" wurde aktualisiert und ${t('saved')}`:'Fehler beim Speichern');renderManageList()}catch(e){showStatus('error','Fehler beim Aktualisieren: '+e.message)}}
+async function uploadManageImage(recipeId,file){if(!file||!file.type.startsWith('image/'))return;const title=recipes.find(r=>r.id===recipeId);const name=title?(lang==='de'?title.title_de:title.title_en):recipeId;showStatus('info',`📷 Bild für "${name}" wird gelesen…`);const reader=new FileReader();reader.onload=function(e){showStatus('info',`📷 Bild für "${name}" wird optimiert…`);optimizeImage(e.target.result,async function(optimized){showStatus('info',`📷 Bild wird auf GitHub hochgeladen… (kann bis zu 30 Sek. dauern)`);const ok=await saveImage(recipeId,optimized);showStatus(ok?'success':'error',ok?`✓ Bild für "${name}" ${t('saved')}`:'Fehler beim Hochladen');renderManageList()})};reader.readAsDataURL(file)}
+async function deleteRecipe(id){const r=recipes.find(x=>x.id===id);if(!r)return;const title=lang==='de'?r.title_de:r.title_en;if(!confirm(t('deleteConfirm')+'\n\n'+title))return;recipes=recipes.filter(x=>x.id!==id);delete stats[id];showStatus('info',t('saving'));try{const ok1=await saveRecipes();if(!ok1){showStatus('error','Fehler beim Speichern');return}await new Promise(res=>setTimeout(res,3000));await saveStats().catch(()=>{});await new Promise(res=>setTimeout(res,2000));await ghDelete(`images/${id}.jpg`,'Delete image for '+id).catch(()=>{});showStatus('success',`✓ "${title}" ${t('deleted')}`)}catch(e){showStatus('error','Fehler: '+e.message)}renderManageList()}
+async function resetAllClicks(){const msg=lang==='de'?'Alle Klickzahlen auf 0 zurücksetzen?':'Reset all click counts to 0?';if(!confirm(msg))return;for(const key in stats)stats[key]=0;showStatus('info',t('saving'));const ok=await saveStats();showStatus(ok?'success':'error',ok?(lang==='de'?'✓ Alle Klickzahlen wurden zurückgesetzt.':'✓ All click counts have been reset.'):'Fehler beim Speichern');renderManageList()}
+async function deleteAllRecipes(){const count=recipes.length;if(!count)return;if(!confirm(lang==='de'?`Wirklich ALLE ${count} Rezepte unwiderruflich löschen?`:`Really delete ALL ${count} recipes permanently?`))return;const expected=lang==='de'?'LÖSCHEN':'DELETE';const input=prompt(lang==='de'?'Bitte "LÖSCHEN" eingeben:':'Please type "DELETE":');if(input!==expected){showStatus('info',lang==='de'?'Abgebrochen.':'Cancelled.');return}showStatus('info',t('saving'));try{const imageIds=recipes.map(r=>r.id);recipes=[];stats={};const ok1=await saveRecipes();if(!ok1){showStatus('error','Fehler beim Speichern');return}await new Promise(res=>setTimeout(res,3000));await saveStats().catch(()=>{});for(const id of imageIds){await new Promise(res=>setTimeout(res,2000));await ghDelete(`images/${id}.jpg`,'Delete image').catch(()=>{})}showStatus('success',lang==='de'?`✓ Alle ${count} Rezepte gelöscht.`:`✓ All ${count} recipes deleted.`)}catch(e){showStatus('error','Fehler: '+e.message)}renderManageList()}
+function checkHash(){const hash=location.hash;const match=hash.match(/^#\/(de|en)\/recipe\/(.+)$/);if(match){const hl=match[1],slug=match[2];if(hl!==lang){lang=hl;document.querySelectorAll('.lang-switch button').forEach(b=>b.classList.toggle('active',b.textContent.toLowerCase()===lang));document.getElementById('searchInput').placeholder=t('search');document.getElementById('tabRecipes').textContent=t('recipes');document.getElementById('tabImport').textContent=t('import')}const r=findRecipeBySlug(slug);if(r){showRecipe(r.id);return}}const lm=hash.match(/^#\/(de|en)$/);if(lm&&lm[1]!==lang){lang=lm[1];document.querySelectorAll('.lang-switch button').forEach(b=>b.classList.toggle('active',b.textContent.toLowerCase()===lang))}showListDirect()}
+function showListDirect(){currentRecipeId=null;cachedNavList=null;document.getElementById('recipeList').classList.remove('hidden');document.getElementById('recipeDetail').classList.remove('active');document.getElementById('recipeDetail').style.display='none';document.getElementById('importPanel').classList.remove('active');document.getElementById('tabRecipes').classList.add('active');document.getElementById('tabImport').classList.remove('active');renderList()}
+(async function(){const savedToken=sessionStorage.getItem('gh_token');if(savedToken){ghToken=savedToken;loggedIn=true;document.getElementById('tabImport').classList.remove('hidden');document.getElementById('authBtn').innerHTML='🔓 '+t('logout')}await loadRecipes();checkHash()})();
+window.addEventListener('hashchange',checkHash);
+</script>
+</body>
+</html>
