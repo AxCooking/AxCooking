@@ -238,5 +238,389 @@
         "text": "Melt clarified butter in a Schnitzel pan (or large cooking pot) and heat to 170° C | 340° F. The amount of clarified butter ensures that the temperature remains as constant as possible during frying. In addition, the Cordon Bleu must be able to float in the clarified butter. As soon as the Cordon Bleu floats to the top, constantly pour the hot clarified butter over the top of the Cordon Bleu with a spoon (souffle). Souffling creates the typical large bubbles of breading. Unlike the Wiener Schnitzel, do not move the pan back and forth to souffle. Once the edges turn golden brown, carefully flip the Cordon Bleu open side up. Use tongs to gently and carefully when flipping. First, you still want cheese in the Cordon Bleu and second, it can be dangerous if a lot of cheese flows into the hot clarified butter at once. Turn off the heat now and continue to souffle the Cordon Bleu. When the cheese melts and runs out, the clarified butter starts to boil more violently, you can see and hear it. When this happens, don't keep frying for a long time, otherwise there will be no cheese left in the Cordon Bleu. Frying takes no more than about 1.5 to 2 minutes per side. Do not remove the finished Cordon Bleu from the pan with tongs, better lift it out from the bottom with a skimmer."
       }
     ]
+  },
+  {
+    "id": "buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren",
+    "title_de": "Bündner Gerstensuppe der Schweizer Armee (zum Einfrieren)",
+    "title_en": "Swiss Army Barley Soup (for freezing)",
+    "desc_de": "Die Bündner Gerstensuppe mit Wiener Würstchen gehört zu meinem Lieblingslunch bei einem Skitag in den Ostschweizer Alpen. Ursprung dieses Rezeptes war ein Rezept der Schweizer Armee. Ehrlich gesagt, habe ich die Zutaten \"leicht\" angepasst. In der Schweizer Armee gibt es natürlich kein Bündnerfleisch als Einlage und generell wird weniger Gemüse und Speck verwendet und auch ein Wiener Würstchen sucht man vergeblich. Dieses Rezept ist sehr reichhaltig und ist als vollwertige Mahlzeit, also als Hauptgericht und nicht als Vorspeise gedacht. Die Koch- und Zubereitungszeit ist auf 20 Portionen gerechnet.",
+    "desc_en": "Barley soup Grison style from eastern Switzerland with Vienna sausages is one of my favorite lunches on a ski day in the eastern Swiss Alps. The origin of this recipe was a Swiss Army recipe. To be honest, I adapted the ingredients \"slightly\". In the Swiss Army, of course, there is no air-dried meat (produced in the eastern Swiss Alps) as a chowder and generally less vegetables and bacon are used and you also look in vain for a Vienna sausage. This recipe is very rich and is meant to be a full meal, a main course, not an appetizer. The cooking and preparation time is calculated for 20 servings.",
+    "difficulty_de": "einfach",
+    "difficulty_en": "simple",
+    "workTime": "1h 30m",
+    "cookTime": "2h 30m",
+    "restTime": "0m",
+    "totalTime": "4h 0m",
+    "youtubeId": "",
+    "youtubeUrl": "",
+    "tiktokUrl": "",
+    "tags_de": [
+      "Vorspeise",
+      "Fleisch",
+      "Schweizer Küche",
+      "Schwein"
+    ],
+    "tags_en": [
+      "Starter",
+      "Meat",
+      "Swiss cuisine",
+      "Pork"
+    ],
+    "baseServings": 30,
+    "servingsUnit_de": "Portionen",
+    "servingsUnit_en": "portion",
+    "emoji": "🍽",
+    "steps_de": [
+      {
+        "title": "Gemüse vorbereiten",
+        "ingredients": [
+          {
+            "amount": 15,
+            "unit": "Vol L",
+            "name": "Kochtopf (Vol L = minimum Kochtopf Volumen in Liter)",
+            "bring": true
+          },
+          {
+            "amount": 1200,
+            "unit": "gr",
+            "name": "Zwiebeln",
+            "bring": true
+          },
+          {
+            "amount": 900,
+            "unit": "gr",
+            "name": "Karotten",
+            "bring": true
+          },
+          {
+            "amount": 600,
+            "unit": "gr",
+            "name": "Lauch (Porree)",
+            "bring": true
+          },
+          {
+            "amount": 900,
+            "unit": "gr",
+            "name": "Knollensellerie",
+            "bring": true
+          }
+        ],
+        "text": "Gemüse schälen, Zwiebeln fein hacken, Lauch gut waschen und klein schneiden. Karotten und Knollensellerie in kleine Würfel (ca. 5 mm) schneiden. Zwiebeln separat bei Seite stellen."
+      },
+      {
+        "title": "Fleisch vorbereiten",
+        "ingredients": [
+          {
+            "amount": 1050,
+            "unit": "gr",
+            "name": "Geräucherter Bauernspeck",
+            "bring": true
+          }
+        ],
+        "text": "Speckschwarte und Knorpel vollständig entfernen. Die Speckschwarte separat bei Seite stellen. Den Speck in ca. 10 mm kleine Würfel schneiden."
+      },
+      {
+        "title": "Suppe zubereiten",
+        "ingredients": [
+          {
+            "amount": 75,
+            "unit": "gr",
+            "name": "Rapsöl",
+            "bring": true
+          },
+          {
+            "amount": 600,
+            "unit": "gr",
+            "name": "Bündner Rollgerste",
+            "bring": true
+          },
+          {
+            "amount": 5100,
+            "unit": "ml",
+            "name": "Hühnerfond (ungesalzen, selbstgemacht)",
+            "bring": true
+          },
+          {
+            "amount": 2400,
+            "unit": "ml",
+            "name": "Wasser",
+            "bring": true
+          },
+          {
+            "amount": 3,
+            "unit": "Stk.",
+            "name": "Lorbeerblatt (frisch oder getrocknet)",
+            "bring": true
+          },
+          {
+            "amount": 45,
+            "unit": "gr",
+            "name": "Salz",
+            "bring": true
+          },
+          {
+            "amount": 9,
+            "unit": "gr",
+            "name": "Pfeffer (frisch gemahlen)",
+            "bring": true
+          }
+        ],
+        "text": "Das Öl in einen grossen Kochtopf geben und die Speckwürfel auf Hitzestufe 7/9 leicht anbraten, die Zwiebeln hinzugeben und mit andünsten. Hitze etwas reduzieren und die Rollgerste hinzugeben und ebenfalls andünsten. Nun das Gemüse hinzugeben und ebenfalls andünsten. Darauf achten, dass das Gemüse keine Farbe annimmt. Mit Hühnerfond und Wasser auffüllen, die Speckschwarten und den Lorbeer hinzugeben, kurz aufkochen und dann für 2 h simmern lassen.\r\n\r\nDen weissen Schaum und das Fett das oben aufschwimmt mit einer Suppenkelle abschöpfen und die Speckschwarten und den Lorbeer entfernen. Dann mit Salz und Pfeffer abschmecken."
+      },
+      {
+        "title": "Aufbewahrung und Haltbarkeit",
+        "ingredients": [
+          {
+            "amount": 30,
+            "unit": "Stk.",
+            "name": "Vorratsdose (400 ml Volumen)",
+            "bring": true
+          }
+        ],
+        "text": "Die Vorratsdose bis 5 mm unterhalb des Dosenrandes abfüllen. Nicht randvoll abfüllen, da sich die Masse beim einfrieren ausdehnt. Deckel aufsetzen und bei Raumtemperatur oder besser im Kühlschrank abkühlen lassen. Sobald alles abgekühlt ist, im Gefrierschrank einfrieren. Falls vorhanden, die Schnellgefrier- oder Schockgefrierfunktion einschalten, damit der Einfrierprozess so schnell wie möglich von statten geht und sich so weniger Eiskristalle bilden.\r\n\r\nZur Haltbarkeit des Eingefrorenen gibt es unterschiedliche Theorien, ich von meiner Seite habe noch nie eine eingefrorene Suppe entsorgt und habe dabei noch nie schlechte Erfahrungen gemacht. Generell gilt, Gefrierbrand ist nicht schädlich und auch nicht giftig, sondern reduziert die Qualität des Eingefrorenen. Allgemein kann gesagt werden, je länger etwas eingefroren ist, um so mehr Nährstoffe und Geschmack geht verloren. Auf jeden Fall sollte man in diesem Rezept den Vollrahm erst bei der Zubereitung hinzugeben und nicht bereits vor dem Einfrieren.\r\n\r\nGrundsätzlich könnte man diese Suppe auch einkochen. Aufgrund von schlechten Erfahrungen beim Einkochen von Suppen, bin ich dazu übergegangen, Suppen konsequent einzufrieren."
+      },
+      {
+        "title": "Zubereitung der Suppe (1 Portion)",
+        "ingredients": [
+          {
+            "amount": 1.5,
+            "unit": "Stk.",
+            "name": "Vorratsdose mit eingefrorener Suppe (400 ml Volumen)",
+            "bring": true
+          },
+          {
+            "amount": 3,
+            "unit": "Stk.",
+            "name": "Wiener Würstchen",
+            "bring": true
+          },
+          {
+            "amount": 15,
+            "unit": "gr",
+            "name": "Bündnerfleisch (Trockenfleisch)",
+            "bring": true
+          },
+          {
+            "amount": 75,
+            "unit": "ml",
+            "name": "Wasser",
+            "bring": true
+          },
+          {
+            "amount": 105,
+            "unit": "ml",
+            "name": "Sahne (Vollrahm)",
+            "bring": true
+          },
+          {
+            "amount": 3,
+            "unit": "Stk.",
+            "name": "Petersilienblatt (frisch)",
+            "bring": true
+          },
+          {
+            "amount": 4.5,
+            "unit": "Pr",
+            "name": "Salz",
+            "bring": true
+          },
+          {
+            "amount": 1.5,
+            "unit": "Pr",
+            "name": "Pfeffer (frisch gemahlen)",
+            "bring": true
+          }
+        ],
+        "text": "Eingefrorene Suppe in Kochtopf geben, Wasser in die Vorratsdose geben, Deckel drauf, gut schütteln und ausgespültes Wasser zur Suppe in den Topf geben. Abgedeckt bei mittlerer Hitze (Hitzestufe 5/9) langsam auftauen lassen. Die Würstchen hinzugeben und 5 bis 10 Minuten leicht kochen lassen. Das Bündnerfleisch in ca. 15 mm grosse Scheiben schneiden. Die Würstchen herausnehmen, in kleine Rädchen schneiden und beides wieder zur Suppe geben. Vollrahm hinzugeben, verrühren und mit Salz und Pfeffer nach eigenem Geschmack nachwürzen. Kurz aufkochen lassen, dann dekoriert mit Petersilie oder Schnittlauch servieren und sofort geniessen."
+      }
+    ],
+    "steps_en": [
+      {
+        "title": "Prepare the vegetables",
+        "ingredients": [
+          {
+            "amount": 15,
+            "unit": "g",
+            "name": "Onions",
+            "bring": false
+          },
+          {
+            "amount": 1200,
+            "unit": "g",
+            "name": "Carrots",
+            "bring": false
+          },
+          {
+            "amount": 900,
+            "unit": "g",
+            "name": "Leek",
+            "bring": false
+          },
+          {
+            "amount": 600,
+            "unit": "g",
+            "name": "Celeriac",
+            "bring": false
+          },
+          {
+            "amount": 900,
+            "unit": "ml",
+            "name": "Peel vegetables, finely chop onions, wash leeks well and chop. Cut carrots and celeriac into small cubes (about 5 mm | 0.2 in). Set onions aside separately.",
+            "bring": false
+          }
+        ],
+        "text": ""
+      },
+      {
+        "title": "Prepare the meat",
+        "ingredients": [
+          {
+            "amount": 1050,
+            "unit": "g",
+            "name": "Smoked farmhouse bacon",
+            "bring": false
+          },
+          {
+            "amount": 1050,
+            "unit": "gr",
+            "name": "Remove bacon rind and cartilage completely. Set the bacon rind aside separately. Cut the bacon into small cubes (about 10 mm | 0.4 in).",
+            "bring": false
+          }
+        ],
+        "text": ""
+      },
+      {
+        "title": "Prepare the soup",
+        "ingredients": [
+          {
+            "amount": 75,
+            "unit": "g",
+            "name": "Nutural oil",
+            "bring": false
+          },
+          {
+            "amount": 75,
+            "unit": "g",
+            "name": "Rolled barley",
+            "bring": false
+          },
+          {
+            "amount": 600,
+            "unit": "ml",
+            "name": "Chicken stock (unsalted, homemade)",
+            "bring": false
+          },
+          {
+            "amount": 5100,
+            "unit": "ml",
+            "name": "Water",
+            "bring": false
+          },
+          {
+            "amount": 2400,
+            "unit": "pc",
+            "name": "Bay leaf (fresh or dried)",
+            "bring": false
+          },
+          {
+            "amount": 3,
+            "unit": "g",
+            "name": "Salt",
+            "bring": false
+          },
+          {
+            "amount": 45,
+            "unit": "g",
+            "name": "Pepper (freshly grounded)",
+            "bring": false
+          },
+          {
+            "amount": 9,
+            "unit": "kg",
+            "name": "Put the oil in a large cooking pot and lightly fry the bacon cubes on heat level 7/9, add the onions and sauté. Reduce the heat slightly and add the rolled barley and sauté as well. Now add the vegetables and sauté them as well. Make sure that the vegetables do not take on color. Fill up with chicken stock and water, add the bacon rinds and the bay leaf, bring to the boil briefly and then simmer for 2 h. Skim off the white foam and the fat that floats to the top with a soup ladle and remove the bacon rinds and the bay leaf. Then season with salt and pepper.",
+            "bring": false
+          }
+        ],
+        "text": ""
+      },
+      {
+        "title": "Storage and shelf life",
+        "ingredients": [
+          {
+            "amount": 30,
+            "unit": "pc",
+            "name": "Storage tin (400 ml volume)",
+            "bring": false
+          },
+          {
+            "amount": 30,
+            "unit": "kg",
+            "name": "Fill the storage can to 5 mm | 0.2 in below the rim of the can. Do not fill to the brim, as the mixture will expand when frozen. Put the lid on and let it cool at room temperature or better in the refrigerator. Once everything has cooled, freeze in the freezer. If available, turn on the quick freeze or blast freeze function so that the freezing process is as fast as possible, reducing the formation of ice crystals.\r\n\r\nThere are different theories about the shelf life of the frozen, I from my side have never disposed of a frozen soup and have never had a bad experience. In general, freezer burn is not harmful or toxic, but reduces the quality of the frozen. Generally speaking, the longer something is frozen, the more nutrients and flavor is lost. In any case, in this recipe you should add the full cream only during preparation and not before freezing.\r\n\r\nIn principle, you could also boil down this soup. Due to bad experiences with boiling down soups, I have switched to consistently freezing soups.",
+            "bring": false
+          }
+        ],
+        "text": ""
+      },
+      {
+        "title": "Preparation of the soup (1 serving)",
+        "ingredients": [
+          {
+            "amount": 1.5,
+            "unit": "pc",
+            "name": "Storage tin with frozen soup (400 ml volume)",
+            "bring": false
+          },
+          {
+            "amount": 1.5,
+            "unit": "pc",
+            "name": "Viennese sausages",
+            "bring": false
+          },
+          {
+            "amount": 3,
+            "unit": "g",
+            "name": "Dried meat (best to use dried meat from eastern Switzerland)",
+            "bring": false
+          },
+          {
+            "amount": 15,
+            "unit": "ml",
+            "name": "Water",
+            "bring": false
+          },
+          {
+            "amount": 75,
+            "unit": "ml",
+            "name": "Cream",
+            "bring": false
+          },
+          {
+            "amount": 105,
+            "unit": "pc",
+            "name": "Parsley leaf (fresh)",
+            "bring": false
+          },
+          {
+            "amount": 3,
+            "unit": "pn",
+            "name": "Salt",
+            "bring": false
+          },
+          {
+            "amount": 4.5,
+            "unit": "pn",
+            "name": "Pepper (freshly grounded)",
+            "bring": false
+          },
+          {
+            "amount": 1.5,
+            "unit": "ml",
+            "name": "Place frozen soup in saucepan, add water to storage can, cover, shake well and add rinsed water to soup in saucepan. Cover and let thaw slowly over medium heat (heat level 5/9). Add the sausages and cook gently for 5 to 10 minutes. Cut the dried meat into slices of about 15 mm. Remove the sausages, cut into small wheels and add both back to the soup. Add full cream, stir and season with salt and pepper to taste. Bring to the boil briefly, then serve decorated with parsley or chives and enjoy immediately.",
+            "bring": false
+          }
+        ],
+        "text": "Eingefrorene Suppe in Kochtopf geben, Wasser in die Vorratsdose geben, Deckel drauf, gut schütteln und ausgespültes Wasser zur Suppe in den Topf geben. Abgedeckt bei mittlerer Hitze (Hitzestufe 5/9) langsam auftauen lassen. Die Würstchen hinzugeben und 5 bis 10 Minuten leicht kochen lassen. Das Bündnerfleisch in ca. 15 mm grosse Scheiben schneiden. Die Würstchen herausnehmen, in kleine Rädchen schneiden und beides wieder zur Suppe geben. Vollrahm hinzugeben, verrühren und mit Salz und Pfeffer nach eigenem Geschmack nachwürzen. Kurz aufkochen lassen, dann dekoriert mit Petersilie oder Schnittlauch servieren und sofort geniessen."
+      }
+    ]
   }
 ]
