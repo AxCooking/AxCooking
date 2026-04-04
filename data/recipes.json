@@ -1,1 +1,242 @@
-[]
+[
+  {
+    "id": "kalbs-cordon-bleu-nach-wiener-art",
+    "title_de": "Kalbs Cordon Bleu nach Wiener Art",
+    "title_en": "Veal Cordon Bleu Viennese Style",
+    "desc_de": "Für mich die beste Variante ein Cordon Bleu zu kochen. Ich verwende die Zubereitungsart des Wiener Schnitzels und habe das Rezept hierzu ein wenig angepasst. Im Prinzip ist das die einzige Möglichkeit, ein Wiener Schnitzel noch köstlicher und leckerer zu machen.",
+    "desc_en": "For me the best way to cook a Cordon Bleu. I use the preparation method of the Wiener Schnitzel and have adapted the recipe for this a little. In principle, this is the only way to make a Wiener Schnitzel even more delicious and tasty.",
+    "difficulty_de": "normal",
+    "difficulty_en": "normal",
+    "workTime": "20m",
+    "cookTime": "5m",
+    "restTime": "0m",
+    "totalTime": "25m",
+    "youtubeId": "S3-eHjDOdK4",
+    "youtubeUrl": "https://www.youtube.com/watch?v=S3-eHjDOdK4&t",
+    "tiktokUrl": "https://www.tiktok.com/@axcooking/video/7114660743546440965",
+    "tags_de": [
+      "Hauptspeise",
+      "Fleisch",
+      "Schweizer Küche",
+      "Kalb"
+    ],
+    "tags_en": [
+      "Main course",
+      "Meat",
+      "Swiss cuisine",
+      "Veal"
+    ],
+    "baseServings": 1,
+    "servingsUnit_de": "Personen",
+    "servingsUnit_en": "people",
+    "emoji": "🍽",
+    "steps_de": [
+      {
+        "title": "Fleisch vorbereiten",
+        "ingredients": [
+          {
+            "amount": 250,
+            "unit": "gr",
+            "name": "Kalbsoberschale (ohne Deckel)",
+            "bring": true
+          }
+        ],
+        "text": "Quer zur Fleischmaserung mit einem Schmetterlingsschnitt zweimal je 1 cm dickes Kalbssteak abschneiden. Kalbssteak zwischen zwei resistente Folien legen (zum Beispiel Vakuumierbeutel). Mit einem grossen Fleischhammer mit der flachen Seite plattieren, bis es gleichmässig ca. 3 mm dünn ist. Beim plattieren darauf achten, dass man sich von der Mitte nach Aussen vorarbeitet. Es soll eine möglichst runde Form ergeben. Die plattierten Kalbsteaks bis zur Weiterverarbeitung zwischen den Folien belassen, damit das Fleisch nicht austrocknet und weniger schnell grau wird."
+      },
+      {
+        "title": "Panierstrasse vorbereiten",
+        "ingredients": [
+          {
+            "amount": 10,
+            "unit": "Stk.",
+            "name": "Eier",
+            "bring": true
+          },
+          {
+            "amount": 300,
+            "unit": "gr",
+            "name": "Doppelgriffiges Mehl",
+            "bring": true
+          },
+          {
+            "amount": 500,
+            "unit": "gr",
+            "name": "Österreichische Semmel Brösel",
+            "bring": true
+          }
+        ],
+        "text": "Drei Behälter verwenden, die von der Fläche her grösser sind als das Cordon Bleu. Das macht alles einfacher. In den ersten Behälter das doppelgriffige Mehl geben, zum Beispiel Spätzlemehl Typ 405 (das ist wichtig!). In den zweiten Behälter die Eier aufschlagen und etwas verquirlen. Es soll noch etwas Eiweiss sichtbar sein. Wichtig ist, dass das Cordon Bleu in den verquirlten Eiern baden kann. In den dritten Behälter 2/3 der Semmel Brösel und 1/3 der Semmel Brösel in eine separate Schüssel geben. Die oben aufgeführten Mengen werden nicht für die Panade aufgebraucht. Den Teil den man nicht benötigt, kann man wiederverwenden. Die verwendeten Semmel Brösel zuerst sieben, bevor man sie wiederverwendet."
+      },
+      {
+        "title": "Cordon Bleu belegen",
+        "ingredients": [
+          {
+            "amount": 3,
+            "unit": "Stk.",
+            "name": "Hinterschinkenscheiben",
+            "bring": true
+          },
+          {
+            "amount": 60,
+            "unit": "gr",
+            "name": "Greyerzer Käse (rezent)",
+            "bring": true
+          },
+          {
+            "amount": 60,
+            "unit": "gr",
+            "name": "Vacherin Fribourgeois Käse",
+            "bring": true
+          },
+          {
+            "amount": 2,
+            "unit": "Pr",
+            "name": "Salz",
+            "bring": true
+          },
+          {
+            "amount": 1,
+            "unit": "Pr",
+            "name": "Pfeffer (frisch gemahlen)",
+            "bring": true
+          }
+        ],
+        "text": "Die zu belegende Seite salzen und pfeffern. Den Schinken überlappend in die Mitte legen, sodass sich beim Falten des Cordon Bleus der Schinken längs in der Mitte zusammenlegt. Rund herum 2 cm des Kalbssteaks nicht belegen. Den Käse in feine Scheiben schneiden und auf einer Hälfte der Schinkenscheiben platzieren. Der Schinken hilft unteranderem, dass beim fritieren der Käse nicht so schnell auslaufen kann. Mit Hilfe der verwendeten Folie beim Plattieren das Cordon Bleu zusammenlegen und die Ränder andrücken. Ab jetzt das Cordon Bleu jeweils mit der offenen Seite nach oben Wenden und beim Anheben an der offenen Seite zugreifen, damit es nicht auseinander fällt."
+      },
+      {
+        "title": "Panieren",
+        "ingredients": [
+          {
+            "amount": 2,
+            "unit": "Pr",
+            "name": "Salz",
+            "bring": true
+          },
+          {
+            "amount": 1,
+            "unit": "Pr",
+            "name": "Pfeffer (frisch gemahlen)",
+            "bring": true
+          }
+        ],
+        "text": "Zuerst das Cordon Bleu auf einer Seite salzen und pfeffern, dann mit der gewürzten Seite nach unten in das Mehl legen und die zweite Seite salzen und pfeffern. Wenden und sicherstellen, dass das ganze Cordon Bleu mit Mehl bedeckt ist. Überschüssiges Mehl abfallen lassen und dann das Cordon Bleu in die verquirlten Eier geben. Wenden und sicherstellen, dass keine weissen Mehlflecken mehr vorhanden sind. Cordon Bleu Abtropfen lassen und in die Semmel Brösel legen. Dann die separaten Semmelbrösel mit einem Löffel auf der Oberseite des Cordon Bleus verteilen. Die Semmelbrösel nicht andrücken. Kurz liegen lassen, dann die überschüssigen Semmelbrösel abfallen lassen und fritieren."
+      },
+      {
+        "title": "Fritieren",
+        "ingredients": [
+          {
+            "amount": 4000,
+            "unit": "gr",
+            "name": "Butterschmalz",
+            "bring": true
+          }
+        ],
+        "text": "Butterschmalz in einer Schnitzelpfanne (oder grossem Kochtopf) schmelzen und auf 170° C erhitzen. Die Menge an Butterschmalz stellt sicher, dass die Temperatur beim Fritieren möglichst konstant bleibt. Zudem muss das Cordon Bleu im Butterschmalz schwimmen können. Sobald das Cordon Bleu oben aufschwimmt ständig mit einem Löffel den heissen Butterschmalz über die Oberseite des Cordon Bleus giessen (soufflieren). Das Soufflieren erzeugt die typischen grossen Blasen der Panade. Anders als beim Wiener Schnitzel nicht die Pfanne hin- und her bewegen um zu soufflieren. Sobald die Ränder gold-braun werden, das Cordon Bleu vorsichtig mit der offenen Seite nach oben wenden. Beim Wenden mit einer Zange vorsichtig und sanft zupacken. Erstens will man noch Käse im Cordon Bleu haben und zweitens kann es gefährlich werden, wenn viel Käse auf einmal in das heisse Butterschmalz fliesst. Den Herd jetzt abstellen und das Cordon Bleu weiter soufflieren. Wenn der Käse schmilzt und ausläuft fängt das Butterschmalz an heftiger aufzukochen, das sieht und hört man. Wenn das geschieht, dann sollte man nicht mehr lange fritieren, weil sonst kein Käse mehr im Cordon Bleu sein wird. Das Fritieren dauert pro Seite nicht länger als etwa 1.5 bis 2 Minuten. Das fertige Cordon Bleu nicht mit einer Zange aus der Pfanne nehmen, besser von unten mit einer Schaumkelle herausheben."
+      }
+    ],
+    "steps_en": [
+      {
+        "title": "Prepare the meat",
+        "ingredients": [
+          {
+            "amount": 250,
+            "unit": "g",
+            "name": "Veal topside (without cap)",
+            "bring": false
+          }
+        ],
+        "text": "Cut two 1 cm (0.4 in) thick veal steaks across the grain of the meat with a butterfly cut. Place veal steak between two resistant foils (for example vacuum bags). Using a large meat mallet, plate with the flat side until it is uniformly about 3 mm (⅛ in) thin. When plating, make sure to work your way from the center out. It should result in as round a shape as possible. Leave the plated veal steaks between the sheets until further processing, so that the meat does not dry out and turns gray less quickly."
+      },
+      {
+        "title": "Prepare breading line",
+        "ingredients": [
+          {
+            "amount": 10,
+            "unit": "pc",
+            "name": "Eggs",
+            "bring": false
+          },
+          {
+            "amount": 300,
+            "unit": "g",
+            "name": "Pastry flour (coarse ground flour)",
+            "bring": false
+          },
+          {
+            "amount": 500,
+            "unit": "g",
+            "name": "Austrian breadcrumbs",
+            "bring": false
+          }
+        ],
+        "text": "Use three containers that are larger in area than the Cordon Bleu. This makes everything easier. In the first container, put the pastry flour (coarse ground flour). In the second container, crack the eggs and whisk them a bit. There should still be some egg white visible. In the third container, add ⅔ of the bread crumbs and put ⅓ of the bread crumbs in a separate bowl. The amounts listed above will not be used up for the breading. The part you don't need can be reused. Sift the used breadcrumbs first before reusing them."
+      },
+      {
+        "title": "Topping the Cordon Bleu",
+        "ingredients": [
+          {
+            "amount": 3,
+            "unit": "pc",
+            "name": "Slices of ham",
+            "bring": false
+          },
+          {
+            "amount": 60,
+            "unit": "g",
+            "name": "Gruyère Swiss cheese (recent)",
+            "bring": false
+          },
+          {
+            "amount": 60,
+            "unit": "g",
+            "name": "Vacherin Fribourgeois Swiss cheese",
+            "bring": false
+          },
+          {
+            "amount": 2,
+            "unit": "pn",
+            "name": "Salt",
+            "bring": false
+          },
+          {
+            "amount": 1,
+            "unit": "pn",
+            "name": "Pepper (freshly grounded)",
+            "bring": false
+          }
+        ],
+        "text": "Salt and pepper the side to be covered. Place the ham overlapping in the center so that when the Cordon Bleu is folded, the ham folds lengthwise in the center. All around, do not cover 2 cm (¾ in) of the veal steak. Finely slice the cheese and place it on one half of the ham slices. The ham helps, among other things, that during frying the cheese does not run out so quickly. With the help of the foil used when plating, fold the Cordon Bleu and press the edges. From now on, turn the Cordon Bleu over with the open side facing up and grab the open side when lifting it so that it does not fall apart."
+      },
+      {
+        "title": "Breading",
+        "ingredients": [
+          {
+            "amount": 2,
+            "unit": "pn",
+            "name": "Salt",
+            "bring": false
+          },
+          {
+            "amount": 1,
+            "unit": "pn",
+            "name": "Pepper (freshly grounded)",
+            "bring": false
+          }
+        ],
+        "text": "Salt and pepper one side of the Cordon Bleu first, then place it in the flour, seasoned side down, and salt and pepper the second side. Turn and make sure the entire Cordon Bleu is covered with flour. Allow excess flour to fall away and then place the Cordon Bleu in the beaten eggs. Turn and make sure there are no white flour spots left. Drain Cordon Bleu and place in bread crumbs. Then spoon the separate bread crumbs over the top of the Cordon Bleu. Do not press down the bread crumbs. Let sit briefly, then let the excess bread crumbs fall away and fry."
+      },
+      {
+        "title": "Frying",
+        "ingredients": [
+          {
+            "amount": 4000,
+            "unit": "g",
+            "name": "Clarified butter",
+            "bring": false
+          }
+        ],
+        "text": "Melt clarified butter in a Schnitzel pan (or large cooking pot) and heat to 170° C | 340° F. The amount of clarified butter ensures that the temperature remains as constant as possible during frying. In addition, the Cordon Bleu must be able to float in the clarified butter. As soon as the Cordon Bleu floats to the top, constantly pour the hot clarified butter over the top of the Cordon Bleu with a spoon (souffle). Souffling creates the typical large bubbles of breading. Unlike the Wiener Schnitzel, do not move the pan back and forth to souffle. Once the edges turn golden brown, carefully flip the Cordon Bleu open side up. Use tongs to gently and carefully when flipping. First, you still want cheese in the Cordon Bleu and second, it can be dangerous if a lot of cheese flows into the hot clarified butter at once. Turn off the heat now and continue to souffle the Cordon Bleu. When the cheese melts and runs out, the clarified butter starts to boil more violently, you can see and hear it. When this happens, don't keep frying for a long time, otherwise there will be no cheese left in the Cordon Bleu. Frying takes no more than about 1.5 to 2 minutes per side. Do not remove the finished Cordon Bleu from the pan with tongs, better lift it out from the bottom with a skimmer."
+      }
+    ]
+  }
+]
