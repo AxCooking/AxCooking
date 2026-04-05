@@ -3,7 +3,8 @@
     {
       "name": "Axler",
       "text": "Test Kommentar wegen Datum.",
-      "date": "2026-04-05T12:11:22.084Z"
+      "date": "2026-04-05T12:11:22.084Z",
+      "approved": true
     }
   ]
 }
