@@ -860,13 +860,31 @@
       "Hauptspeise",
       "Fleisch",
       "Schweizer Küche",
-      "Kalb"
+      "Beilage",
+      "Vegetarisch",
+      "Französische Küche",
+      "Dessert",
+      "Griechische Küche",
+      "Kalb",
+      "Schwein",
+      "Frische Kräuter",
+      "Einfrieren",
+      "Einkochen"
     ],
     "tags_en": [
       "Main course",
       "Meat",
       "Swiss cuisine",
-      "Veal"
+      "Side dish",
+      "Vegetarian",
+      "French Cuisine",
+      "Dessert",
+      "Greek cuisine",
+      "Veal",
+      "Pork",
+      "Fresh herbs",
+      "Freezing food",
+      "Canning"
     ],
     "baseServings": 1,
     "servingsUnit_de": "Personen",
