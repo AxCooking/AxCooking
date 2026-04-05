@@ -622,5 +622,221 @@
         "text": "Eingefrorene Suppe in Kochtopf geben, Wasser in die Vorratsdose geben, Deckel drauf, gut schütteln und ausgespültes Wasser zur Suppe in den Topf geben. Abgedeckt bei mittlerer Hitze (Hitzestufe 5/9) langsam auftauen lassen. Die Würstchen hinzugeben und 5 bis 10 Minuten leicht kochen lassen. Das Bündnerfleisch in ca. 15 mm grosse Scheiben schneiden. Die Würstchen herausnehmen, in kleine Rädchen schneiden und beides wieder zur Suppe geben. Vollrahm hinzugeben, verrühren und mit Salz und Pfeffer nach eigenem Geschmack nachwürzen. Kurz aufkochen lassen, dann dekoriert mit Petersilie oder Schnittlauch servieren und sofort geniessen."
       }
     ]
+  },
+  {
+    "id": "caprese-salat-tomaten-mozzarella-mit-crostinis",
+    "title_de": "Caprese Salat (Tomaten Mozzarella) mit Crostinis",
+    "title_en": "Caprese salad (tomato mozzarella) with crostinis",
+    "desc_de": "Caprese Salat mit Tomaten und Mozzarella mal anders interpretiert. Der für meinen Geschmack eher langweilige klassische Caprese Salat, wird durch die Verwendung der Balsamico Crème und dem selbstgemachten Pesto Genovese stark aufgewertet und sorgt für ein Geschmackserlebnis.",
+    "desc_en": "Caprese salad with tomatoes and mozzarella cheese interpreted differently. The for my taste rather boring classic Caprese salad, is greatly enhanced by the use of balsamic cream and homemade pesto genovese and provides a taste experience.",
+    "difficulty_de": "einfach",
+    "difficulty_en": "simple",
+    "workTime": "20m",
+    "cookTime": "12m",
+    "restTime": "0m",
+    "totalTime": "32m",
+    "youtubeId": "QteUBx8wl8I",
+    "youtubeUrl": "https://www.youtube.com/watch?v=QteUBx8wl8I",
+    "tiktokUrl": "",
+    "tags_de": [
+      "Vorspeise",
+      "Vegetarisch",
+      "Italienische Küche",
+      "Frische Kräuter"
+    ],
+    "tags_en": [
+      "Starter",
+      "Vegetarian",
+      "Italian Cuisine",
+      "Fresh herbs"
+    ],
+    "baseServings": 1,
+    "servingsUnit_de": "Personen",
+    "servingsUnit_en": "people",
+    "emoji": "🍽",
+    "steps_de": [
+      {
+        "title": "Crostini zubereiten",
+        "ingredients": [
+          {
+            "amount": 2,
+            "unit": "Stk.",
+            "name": "Ciabatta Brotscheiben (klein, 1 cm dick)",
+            "bring": true
+          },
+          {
+            "amount": 2,
+            "unit": "Spr",
+            "name": "Olivenöl (kaltgepresst, hohe Qualität)",
+            "bring": true
+          },
+          {
+            "amount": 1,
+            "unit": "TL",
+            "name": "Pesto Genovese (selbstgemacht)",
+            "bring": true
+          },
+          {
+            "amount": 1,
+            "unit": "TL",
+            "name": "Pesto Rosso (selbstgemacht)",
+            "bring": true
+          }
+        ],
+        "text": "Brotscheiben auf einer Seite mit Olivenöl beträufeln und mit der Ölseite nach oben bei 230° C im Backofen während 3 bis 4 min toasten, sodass die Oberseite knusprig und die Unterseite soft bleibt. Dann je die Hälfte der Brotscheiben auf der knusprigen Seite mit einem der Pestos bestreichen."
+      },
+      {
+        "title": "Caprese zubereiten",
+        "ingredients": [
+          {
+            "amount": 120,
+            "unit": "gr",
+            "name": "Büffelmozzarella",
+            "bring": true
+          },
+          {
+            "amount": 6,
+            "unit": "Stk.",
+            "name": "Aroma Tomaten (klein)",
+            "bring": true
+          },
+          {
+            "amount": 10,
+            "unit": "Stk.",
+            "name": "Basilikumblätter (frisch, klein)",
+            "bring": true
+          },
+          {
+            "amount": 2,
+            "unit": "Pr",
+            "name": "Salz",
+            "bring": false
+          },
+          {
+            "amount": 1,
+            "unit": "Pr",
+            "name": "Zucker",
+            "bring": false
+          },
+          {
+            "amount": 1,
+            "unit": "Pr",
+            "name": "Pfeffer (frisch gemahlen)",
+            "bring": false
+          },
+          {
+            "amount": 2,
+            "unit": "EL",
+            "name": "Olivenöl (kaltgepresst, hohe Qualität)",
+            "bring": true
+          },
+          {
+            "amount": 1,
+            "unit": "TL",
+            "name": "Pesto Genovese (selbstgemacht)",
+            "bring": true
+          },
+          {
+            "amount": 1,
+            "unit": "TL",
+            "name": "Aceto Balsamico Crème (hohe Qualität)",
+            "bring": true
+          }
+        ],
+        "text": "Büffelmozzarella über Sieb abtropfen lassen. Die Tomaten längs halbieren, in eine Schüssel geben, mit Salz, Zucker und Pfeffer würzen, vermengen und kurz marinieren lassen. Das Pesto mit dem Olivenöl vermengen, damit eine flüssige Konsistenz entsteht.\r\n\r\nDen Büffelmozzarella von Hand in kleine Stücke zerreissen, einzeln auf einen Teller geben, dann je mit einer Tomate bestücken, mit der Balsamico Crème beträuffeln und etwas Pesto Genovese darüber geben. Mit einem Basilikumblatt dekorieren. Crostinis dazulegen und sofort geniessen."
+      }
+    ],
+    "steps_en": [
+      {
+        "title": "Prepare Crostini",
+        "ingredients": [
+          {
+            "amount": 2,
+            "unit": "pc",
+            "name": "Ciabatta bread slices (small, 1 cm | ⅖ in thick)",
+            "bring": false
+          },
+          {
+            "amount": 2,
+            "unit": "ds",
+            "name": "Olive oil (cold pressed, high quality)",
+            "bring": false
+          },
+          {
+            "amount": 1,
+            "unit": "ts",
+            "name": "Pesto Genovese (homemade)",
+            "bring": false
+          },
+          {
+            "amount": 1,
+            "unit": "ts",
+            "name": "Pesto Rosso (homemade)",
+            "bring": false
+          }
+        ],
+        "text": "Drizzle one side of the bread slices with olive oil and toast them, oil side up, in the oven at 230° C | 450° F for 3 to 4 minutes, leaving the top crispy and the bottom soft. Then spread half of each bread slice on the crispy side with one of the pestos."
+      },
+      {
+        "title": "Prepare Caprese",
+        "ingredients": [
+          {
+            "amount": 120,
+            "unit": "g",
+            "name": "Buffalo mozzarella",
+            "bring": false
+          },
+          {
+            "amount": 6,
+            "unit": "pc",
+            "name": "Aroma tomatoes (small)",
+            "bring": false
+          },
+          {
+            "amount": 10,
+            "unit": "pc",
+            "name": "Basil leaves (fresh, small)",
+            "bring": false
+          },
+          {
+            "amount": 2,
+            "unit": "pn",
+            "name": "Salt",
+            "bring": false
+          },
+          {
+            "amount": 1,
+            "unit": "pn",
+            "name": "Sugar",
+            "bring": false
+          },
+          {
+            "amount": 1,
+            "unit": "pn",
+            "name": "Pepper (freshly grounded)",
+            "bring": false
+          },
+          {
+            "amount": 2,
+            "unit": "tb",
+            "name": "Olive oil (cold pressed, high quality)",
+            "bring": false
+          },
+          {
+            "amount": 1,
+            "unit": "ts",
+            "name": "Pesto Genovese (homemade)",
+            "bring": false
+          },
+          {
+            "amount": 1,
+            "unit": "ts",
+            "name": "Aceto Balsamico Crème (high quality)",
+            "bring": false
+          }
+        ],
+        "text": "Drain buffalo mozzarella over colander. Cut the tomatoes in half lengthwise, place in a bowl, season with salt, sugar and pepper, mix and let marinate briefly. Mix the pesto with the olive oil to create a liquid consistency.\r\n\r\nTear the buffalo mozzarella into small pieces by hand, place them one by one on a plate, then top each with a tomato, drizzle with the balsamic cream and add some Pesto Genovese on top. Decorate with a basil leaf. Add the crostinis and enjoy immediately."
+      }
+    ]
   }
 ]
