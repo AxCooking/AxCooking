@@ -278,7 +278,7 @@
             "amount": 15,
             "unit": "Vol L",
             "name": "Kochtopf (Vol L = minimum Kochtopf Volumen in Liter)",
-            "bring": true
+            "bring": false
           },
           {
             "amount": 1200,
@@ -356,13 +356,13 @@
             "amount": 45,
             "unit": "gr",
             "name": "Salz",
-            "bring": true
+            "bring": false
           },
           {
             "amount": 9,
             "unit": "gr",
             "name": "Pfeffer (frisch gemahlen)",
-            "bring": true
+            "bring": false
           }
         ],
         "text": "Das Öl in einen grossen Kochtopf geben und die Speckwürfel auf Hitzestufe 7/9 leicht anbraten, die Zwiebeln hinzugeben und mit andünsten. Hitze etwas reduzieren und die Rollgerste hinzugeben und ebenfalls andünsten. Nun das Gemüse hinzugeben und ebenfalls andünsten. Darauf achten, dass das Gemüse keine Farbe annimmt. Mit Hühnerfond und Wasser auffüllen, die Speckschwarten und den Lorbeer hinzugeben, kurz aufkochen und dann für 2 h simmern lassen.\r\n\r\nDen weissen Schaum und das Fett das oben aufschwimmt mit einer Suppenkelle abschöpfen und die Speckschwarten und den Lorbeer entfernen. Dann mit Salz und Pfeffer abschmecken."
@@ -374,7 +374,7 @@
             "amount": 30,
             "unit": "Stk.",
             "name": "Vorratsdose (400 ml Volumen)",
-            "bring": true
+            "bring": false
           }
         ],
         "text": "Die Vorratsdose bis 5 mm unterhalb des Dosenrandes abfüllen. Nicht randvoll abfüllen, da sich die Masse beim einfrieren ausdehnt. Deckel aufsetzen und bei Raumtemperatur oder besser im Kühlschrank abkühlen lassen. Sobald alles abgekühlt ist, im Gefrierschrank einfrieren. Falls vorhanden, die Schnellgefrier- oder Schockgefrierfunktion einschalten, damit der Einfrierprozess so schnell wie möglich von statten geht und sich so weniger Eiskristalle bilden.\r\n\r\nZur Haltbarkeit des Eingefrorenen gibt es unterschiedliche Theorien, ich von meiner Seite habe noch nie eine eingefrorene Suppe entsorgt und habe dabei noch nie schlechte Erfahrungen gemacht. Generell gilt, Gefrierbrand ist nicht schädlich und auch nicht giftig, sondern reduziert die Qualität des Eingefrorenen. Allgemein kann gesagt werden, je länger etwas eingefroren ist, um so mehr Nährstoffe und Geschmack geht verloren. Auf jeden Fall sollte man in diesem Rezept den Vollrahm erst bei der Zubereitung hinzugeben und nicht bereits vor dem Einfrieren.\r\n\r\nGrundsätzlich könnte man diese Suppe auch einkochen. Aufgrund von schlechten Erfahrungen beim Einkochen von Suppen, bin ich dazu übergegangen, Suppen konsequent einzufrieren."
@@ -386,7 +386,7 @@
             "amount": 1.5,
             "unit": "Stk.",
             "name": "Vorratsdose mit eingefrorener Suppe (400 ml Volumen)",
-            "bring": true
+            "bring": false
           },
           {
             "amount": 3,
@@ -404,7 +404,7 @@
             "amount": 75,
             "unit": "ml",
             "name": "Wasser",
-            "bring": true
+            "bring": false
           },
           {
             "amount": 105,
@@ -422,13 +422,13 @@
             "amount": 4.5,
             "unit": "Pr",
             "name": "Salz",
-            "bring": true
+            "bring": false
           },
           {
             "amount": 1.5,
             "unit": "Pr",
             "name": "Pfeffer (frisch gemahlen)",
-            "bring": true
+            "bring": false
           }
         ],
         "text": "Eingefrorene Suppe in Kochtopf geben, Wasser in die Vorratsdose geben, Deckel drauf, gut schütteln und ausgespültes Wasser zur Suppe in den Topf geben. Abgedeckt bei mittlerer Hitze (Hitzestufe 5/9) langsam auftauen lassen. Die Würstchen hinzugeben und 5 bis 10 Minuten leicht kochen lassen. Das Bündnerfleisch in ca. 15 mm grosse Scheiben schneiden. Die Würstchen herausnehmen, in kleine Rädchen schneiden und beides wieder zur Suppe geben. Vollrahm hinzugeben, verrühren und mit Salz und Pfeffer nach eigenem Geschmack nachwürzen. Kurz aufkochen lassen, dann dekoriert mit Petersilie oder Schnittlauch servieren und sofort geniessen."
