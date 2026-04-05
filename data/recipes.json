@@ -344,7 +344,7 @@
             "amount": 2400,
             "unit": "ml",
             "name": "Wasser",
-            "bring": true
+            "bring": false
           },
           {
             "amount": 3,
