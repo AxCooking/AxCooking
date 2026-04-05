@@ -838,5 +838,317 @@
         "text": "Drain buffalo mozzarella over colander. Cut the tomatoes in half lengthwise, place in a bowl, season with salt, sugar and pepper, mix and let marinate briefly. Mix the pesto with the olive oil to create a liquid consistency.\r\n\r\nTear the buffalo mozzarella into small pieces by hand, place them one by one on a plate, then top each with a tomato, drizzle with the balsamic cream and add some Pesto Genovese on top. Decorate with a basil leaf. Add the crostinis and enjoy immediately."
       }
     ]
+  },
+  {
+    "id": "test-rezept",
+    "title_de": "Test Rezept",
+    "title_en": "Test Rezept",
+    "desc_de": "Das ist ein Test Rezept, um die neue Webseite zu Testen. Das ist ein Test Rezept, um die neue Webseite zu Testen. Das ist ein Test Rezept, um die neue Webseite zu Testen. Das ist ein Test Rezept, um die neue Webseite zu Testen. \r\n\r\nDas ist ein Test Rezept, um die neue Webseite zu Testen. Das ist ein Test Rezept, um die neue Webseite zu Testen. Das ist ein Test Rezept, um die neue Webseite zu Testen. Das ist ein Test Rezept, um die neue Webseite zu Testen. Das ist ein Test Rezept, um die neue Webseite zu Testen. Das ist ein Test Rezept, um die neue Webseite zu Testen. Das ist ein Test Rezept, um die neue Webseite zu Testen. Das ist ein Test Rezept, um die neue Webseite zu Testen. Das ist ein Test Rezept, um die neue Webseite zu Testen. ",
+    "desc_en": "Das ist ein Test Rezept, um die neue Webseite zu Testen. Das ist ein Test Rezept, um die neue Webseite zu Testen. Das ist ein Test Rezept, um die neue Webseite zu Testen. Das ist ein Test Rezept, um die neue Webseite zu Testen. \r\n\r\nDas ist ein Test Rezept, um die neue Webseite zu Testen. Das ist ein Test Rezept, um die neue Webseite zu Testen. Das ist ein Test Rezept, um die neue Webseite zu Testen. Das ist ein Test Rezept, um die neue Webseite zu Testen. Das ist ein Test Rezept, um die neue Webseite zu Testen. Das ist ein Test Rezept, um die neue Webseite zu Testen. Das ist ein Test Rezept, um die neue Webseite zu Testen. Das ist ein Test Rezept, um die neue Webseite zu Testen. Das ist ein Test Rezept, um die neue Webseite zu Testen. ",
+    "difficulty_de": "normal",
+    "difficulty_en": "normal",
+    "workTime": "20m",
+    "cookTime": "5m",
+    "restTime": "0m",
+    "totalTime": "25m",
+    "youtubeId": "S3-eHjDOdK4",
+    "youtubeUrl": "https://www.youtube.com/watch?v=S3-eHjDOdK4&t",
+    "tiktokUrl": "https://www.tiktok.com/@axcooking/video/7106237166476446981",
+    "tags_de": [
+      "Hauptspeise",
+      "Fleisch",
+      "Schweizer Küche",
+      "Kalb"
+    ],
+    "tags_en": [
+      "Main course",
+      "Meat",
+      "Swiss cuisine",
+      "Veal"
+    ],
+    "baseServings": 1,
+    "servingsUnit_de": "Personen",
+    "servingsUnit_en": "people",
+    "emoji": "🍽",
+    "steps_de": [
+      {
+        "title": "Fleisch vorbereiten",
+        "ingredients": [
+          {
+            "amount": 250,
+            "unit": "gr",
+            "name": "Kalbsoberschale (ohne Deckel)",
+            "bring": true
+          },
+          {
+            "amount": 5,
+            "unit": "Stk.",
+            "name": "Eier",
+            "bring": true
+          }
+        ],
+        "text": "Quer zur Fleischmaserung mit einem Schmetterlingsschnitt zweimal je 1 cm dickes Kalbssteak abschneiden. Kalbssteak zwischen zwei resistente Folien legen (zum Beispiel Vakuumierbeutel). Mit einem grossen Fleischhammer mit der flachen Seite plattieren, bis es gleichmässig ca. 3 mm dünn ist."
+      },
+      {
+        "title": "Panierstrasse vorbereiten",
+        "ingredients": [
+          {
+            "amount": 6,
+            "unit": "Stk.",
+            "name": "Eier",
+            "bring": true
+          },
+          {
+            "amount": 300,
+            "unit": "gr",
+            "name": "Doppelgriffiges Mehl",
+            "bring": true
+          },
+          {
+            "amount": 500,
+            "unit": "gr",
+            "name": "Österreichische Semmel Brösel",
+            "bring": true
+          }
+        ],
+        "text": "Drei Behälter verwenden, die von der Fläche her grösser sind als das Cordon Bleu. Das macht alles einfacher. In den ersten Behälter das doppelgriffige Mehl geben, zum Beispiel Spätzlemehl Typ 405 (das ist wichtig!). In den zweiten Behälter die Eier aufschlagen und etwas verquirlen."
+      },
+      {
+        "title": "Cordon Bleu belegen",
+        "ingredients": [
+          {
+            "amount": 3,
+            "unit": "Stk.",
+            "name": "Hinterschinkenscheiben",
+            "bring": true
+          },
+          {
+            "amount": 60,
+            "unit": "gr",
+            "name": "Greyerzer Käse (rezent)",
+            "bring": true
+          },
+          {
+            "amount": 60,
+            "unit": "gr",
+            "name": "Vacherin Fribourgeois Käse",
+            "bring": true
+          },
+          {
+            "amount": 2,
+            "unit": "Pr",
+            "name": "Salz",
+            "bring": false
+          },
+          {
+            "amount": 1,
+            "unit": "Pr",
+            "name": "Pfeffer (frisch gemahlen)",
+            "bring": false
+          },
+          {
+            "amount": 6,
+            "unit": "Stk.",
+            "name": "Eier",
+            "bring": true
+          }
+        ],
+        "text": "Die zu belegende Seite salzen und pfeffern. Den Schinken überlappend in die Mitte legen, sodass sich beim Falten des Cordon Bleus der Schinken längs in der Mitte zusammenlegt. Rund herum 2 cm des Kalbssteaks nicht belegen."
+      },
+      {
+        "title": "Panieren",
+        "ingredients": [
+          {
+            "amount": 2,
+            "unit": "Pr",
+            "name": "Salz",
+            "bring": false
+          },
+          {
+            "amount": 1,
+            "unit": "Pr",
+            "name": "Pfeffer (frisch gemahlen)",
+            "bring": false
+          },
+          {
+            "amount": 1,
+            "unit": "Pr",
+            "name": "Kaltes Wasser",
+            "bring": false
+          }
+        ],
+        "text": "Zuerst das Cordon Bleu auf einer Seite salzen und pfeffern, dann mit der gewürzten Seite nach unten in das Mehl legen und die zweite Seite salzen und pfeffern. Wenden und sicherstellen, dass das ganze Cordon Bleu mit Mehl bedeckt ist. Überschüssiges Mehl abfallen lassen und dann das Cordon Bleu in die verquirlten Eier geben. Wenden und sicherstellen, dass keine weissen Mehlflecken mehr vorhanden sind. Cordon Bleu Abtropfen lassen und in die Semmel Brösel legen. Dann die separaten Semmelbrösel mit einem Löffel auf der Oberseite des Cordon Bleus verteilen. Die Semmelbrösel nicht andrücken. Kurz liegen lassen, dann die überschüssigen Semmelbrösel abfallen lassen und fritieren."
+      },
+      {
+        "title": "Fritieren",
+        "ingredients": [
+          {
+            "amount": 6,
+            "unit": "Stk.",
+            "name": "Eier",
+            "bring": true
+          },
+          {
+            "amount": 4000,
+            "unit": "gr",
+            "name": "Butterschmalz",
+            "bring": true
+          },
+          {
+            "amount": 2,
+            "unit": "Stk.",
+            "name": "Vorratsdose (170 ml Volumen)",
+            "bring": false
+          },
+          {
+            "amount": 1,
+            "unit": "Stk.",
+            "name": "Vorratsdose mit Kalbsbacken (450 ml Volumen)",
+            "bring": false
+          }
+        ],
+        "text": "Butterschmalz in einer Schnitzelpfanne (oder grossem Kochtopf) schmelzen und auf 170° C erhitzen. Die Menge an Butterschmalz stellt sicher, dass die Temperatur beim Fritieren möglichst konstant bleibt. Zudem muss das Cordon Bleu im Butterschmalz schwimmen können. Sobald das Cordon Bleu oben aufschwimmt ständig mit einem Löffel den heissen Butterschmalz über die Oberseite des Cordon Bleus giessen (soufflieren). Das Soufflieren erzeugt die typischen grossen Blasen der Panade. Anders als beim Wiener Schnitzel nicht die Pfanne hin- und her bewegen um zu soufflieren. Sobald die Ränder gold-braun werden, das Cordon Bleu vorsichtig mit der offenen Seite nach oben wenden. Beim Wenden mit einer Zange vorsichtig und sanft zupacken. Erstens will man noch Käse im Cordon Bleu haben und zweitens kann es gefährlich werden, wenn viel Käse auf einmal in das heisse Butterschmalz fliesst. Den Herd jetzt abstellen und das Cordon Bleu weiter soufflieren. Wenn der Käse schmilzt und ausläuft fängt das Butterschmalz an heftiger aufzukochen, das sieht und hört man. Wenn das geschieht, dann sollte man nicht mehr lange fritieren, weil sonst kein Käse mehr im Cordon Bleu sein wird. Das Fritieren dauert pro Seite nicht länger als etwa 1.5 bis 2 Minuten. Das fertige Cordon Bleu nicht mit einer Zange aus der Pfanne nehmen, besser von unten mit einer Schaumkelle herausheben."
+      }
+    ],
+    "steps_en": [
+      {
+        "title": "Fleisch vorbereiten",
+        "ingredients": [
+          {
+            "amount": 250,
+            "unit": "gr",
+            "name": "Kalbsoberschale (ohne Deckel)",
+            "bring": true
+          },
+          {
+            "amount": 5,
+            "unit": "Stk.",
+            "name": "Eier",
+            "bring": true
+          }
+        ],
+        "text": "Quer zur Fleischmaserung mit einem Schmetterlingsschnitt zweimal je 1 cm dickes Kalbssteak abschneiden. Kalbssteak zwischen zwei resistente Folien legen (zum Beispiel Vakuumierbeutel). Mit einem grossen Fleischhammer mit der flachen Seite plattieren, bis es gleichmässig ca. 3 mm dünn ist."
+      },
+      {
+        "title": "Panierstrasse vorbereiten",
+        "ingredients": [
+          {
+            "amount": 6,
+            "unit": "Stk.",
+            "name": "Eier",
+            "bring": true
+          },
+          {
+            "amount": 300,
+            "unit": "gr",
+            "name": "Doppelgriffiges Mehl",
+            "bring": true
+          },
+          {
+            "amount": 500,
+            "unit": "gr",
+            "name": "Österreichische Semmel Brösel",
+            "bring": true
+          }
+        ],
+        "text": "Drei Behälter verwenden, die von der Fläche her grösser sind als das Cordon Bleu. Das macht alles einfacher. In den ersten Behälter das doppelgriffige Mehl geben, zum Beispiel Spätzlemehl Typ 405 (das ist wichtig!). In den zweiten Behälter die Eier aufschlagen und etwas verquirlen."
+      },
+      {
+        "title": "Cordon Bleu belegen",
+        "ingredients": [
+          {
+            "amount": 3,
+            "unit": "Stk.",
+            "name": "Hinterschinkenscheiben",
+            "bring": true
+          },
+          {
+            "amount": 60,
+            "unit": "gr",
+            "name": "Greyerzer Käse (rezent)",
+            "bring": true
+          },
+          {
+            "amount": 60,
+            "unit": "gr",
+            "name": "Vacherin Fribourgeois Käse",
+            "bring": true
+          },
+          {
+            "amount": 2,
+            "unit": "Pr",
+            "name": "Salz",
+            "bring": false
+          },
+          {
+            "amount": 1,
+            "unit": "Pr",
+            "name": "Pfeffer (frisch gemahlen)",
+            "bring": false
+          },
+          {
+            "amount": 6,
+            "unit": "Stk.",
+            "name": "Eier",
+            "bring": true
+          }
+        ],
+        "text": "Die zu belegende Seite salzen und pfeffern. Den Schinken überlappend in die Mitte legen, sodass sich beim Falten des Cordon Bleus der Schinken längs in der Mitte zusammenlegt. Rund herum 2 cm des Kalbssteaks nicht belegen."
+      },
+      {
+        "title": "Panieren",
+        "ingredients": [
+          {
+            "amount": 2,
+            "unit": "Pr",
+            "name": "Salz",
+            "bring": false
+          },
+          {
+            "amount": 1,
+            "unit": "Pr",
+            "name": "Pfeffer (frisch gemahlen)",
+            "bring": false
+          },
+          {
+            "amount": 1,
+            "unit": "Pr",
+            "name": "Kaltes Wasser",
+            "bring": false
+          }
+        ],
+        "text": "Zuerst das Cordon Bleu auf einer Seite salzen und pfeffern, dann mit der gewürzten Seite nach unten in das Mehl legen und die zweite Seite salzen und pfeffern. Wenden und sicherstellen, dass das ganze Cordon Bleu mit Mehl bedeckt ist. Überschüssiges Mehl abfallen lassen und dann das Cordon Bleu in die verquirlten Eier geben. Wenden und sicherstellen, dass keine weissen Mehlflecken mehr vorhanden sind. Cordon Bleu Abtropfen lassen und in die Semmel Brösel legen. Dann die separaten Semmelbrösel mit einem Löffel auf der Oberseite des Cordon Bleus verteilen. Die Semmelbrösel nicht andrücken. Kurz liegen lassen, dann die überschüssigen Semmelbrösel abfallen lassen und fritieren."
+      },
+      {
+        "title": "Fritieren",
+        "ingredients": [
+          {
+            "amount": 6,
+            "unit": "Stk.",
+            "name": "Eier",
+            "bring": true
+          },
+          {
+            "amount": 4000,
+            "unit": "gr",
+            "name": "Butterschmalz",
+            "bring": true
+          },
+          {
+            "amount": 2,
+            "unit": "Stk.",
+            "name": "Vorratsdose (170 ml Volumen)",
+            "bring": false
+          },
+          {
+            "amount": 1,
+            "unit": "Stk.",
+            "name": "Vorratsdose mit Kalbsbacken (450 ml Volumen)",
+            "bring": false
+          }
+        ],
+        "text": "Butterschmalz in einer Schnitzelpfanne (oder grossem Kochtopf) schmelzen und auf 170° C erhitzen. Die Menge an Butterschmalz stellt sicher, dass die Temperatur beim Fritieren möglichst konstant bleibt. Zudem muss das Cordon Bleu im Butterschmalz schwimmen können. Sobald das Cordon Bleu oben aufschwimmt ständig mit einem Löffel den heissen Butterschmalz über die Oberseite des Cordon Bleus giessen (soufflieren). Das Soufflieren erzeugt die typischen grossen Blasen der Panade. Anders als beim Wiener Schnitzel nicht die Pfanne hin- und her bewegen um zu soufflieren. Sobald die Ränder gold-braun werden, das Cordon Bleu vorsichtig mit der offenen Seite nach oben wenden. Beim Wenden mit einer Zange vorsichtig und sanft zupacken. Erstens will man noch Käse im Cordon Bleu haben und zweitens kann es gefährlich werden, wenn viel Käse auf einmal in das heisse Butterschmalz fliesst. Den Herd jetzt abstellen und das Cordon Bleu weiter soufflieren. Wenn der Käse schmilzt und ausläuft fängt das Butterschmalz an heftiger aufzukochen, das sieht und hört man. Wenn das geschieht, dann sollte man nicht mehr lange fritieren, weil sonst kein Käse mehr im Cordon Bleu sein wird. Das Fritieren dauert pro Seite nicht länger als etwa 1.5 bis 2 Minuten. Das fertige Cordon Bleu nicht mit einer Zange aus der Pfanne nehmen, besser von unten mit einer Schaumkelle herausheben."
+      }
+    ]
   }
 ]
