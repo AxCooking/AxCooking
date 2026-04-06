@@ -1170,5 +1170,265 @@
         "text": "Butterschmalz in einer Schnitzelpfanne (oder grossem Kochtopf) schmelzen und auf 170° C erhitzen. Die Menge an Butterschmalz stellt sicher, dass die Temperatur beim Fritieren möglichst konstant bleibt. Zudem muss das Cordon Bleu im Butterschmalz schwimmen können. Sobald das Cordon Bleu oben aufschwimmt ständig mit einem Löffel den heissen Butterschmalz über die Oberseite des Cordon Bleus giessen (soufflieren). Das Soufflieren erzeugt die typischen grossen Blasen der Panade. Anders als beim Wiener Schnitzel nicht die Pfanne hin- und her bewegen um zu soufflieren. Sobald die Ränder gold-braun werden, das Cordon Bleu vorsichtig mit der offenen Seite nach oben wenden. Beim Wenden mit einer Zange vorsichtig und sanft zupacken. Erstens will man noch Käse im Cordon Bleu haben und zweitens kann es gefährlich werden, wenn viel Käse auf einmal in das heisse Butterschmalz fliesst. Den Herd jetzt abstellen und das Cordon Bleu weiter soufflieren. Wenn der Käse schmilzt und ausläuft fängt das Butterschmalz an heftiger aufzukochen, das sieht und hört man. Wenn das geschieht, dann sollte man nicht mehr lange fritieren, weil sonst kein Käse mehr im Cordon Bleu sein wird. Das Fritieren dauert pro Seite nicht länger als etwa 1.5 bis 2 Minuten. Das fertige Cordon Bleu nicht mit einer Zange aus der Pfanne nehmen, besser von unten mit einer Schaumkelle herausheben."
       }
     ]
+  },
+  {
+    "id": "gyros-marinade",
+    "title_de": "Gyros Marinade",
+    "title_en": "Gyros Marinade",
+    "desc_de": "Diese Gyros Marinade gehört zu meinen beliebtesten Marinaden und dürfen in keiner Grillsaison fehlen. Die Gyros Marinade ist ziemlich scharf, wenn Du das nicht magst, dann lass einfach die Chiliflocken weg.",
+    "desc_en": "This Gyros marinade is one of my favorite marinades and should not be missing in any barbecue season. The Gyros marinade is quite spicy, if you don't like that, just leave out the chili flakes.",
+    "difficulty_de": "einfach",
+    "difficulty_en": "simple",
+    "workTime": "15m",
+    "cookTime": "0m",
+    "restTime": "2h 0m",
+    "totalTime": "2h 15m",
+    "youtubeId": "CCBaT6jK_cA",
+    "youtubeUrl": "https://www.youtube.com/watch?v=CCBaT6jK_cA",
+    "tiktokUrl": "",
+    "tags_de": [
+      "BBQ",
+      "Scharf",
+      "Griechische Küche",
+      "Grillen",
+      "Vegan",
+      "Marinade",
+      "Vegetarisch",
+      "Frische Kräuter"
+    ],
+    "tags_en": [
+      "BBQ",
+      "Spicy",
+      "Greek cuisine",
+      "BBQ",
+      "Vegan",
+      "Marinade",
+      "Vegetarian",
+      "Fresh herbs"
+    ],
+    "baseServings": 500,
+    "servingsUnit_de": "ml",
+    "servingsUnit_en": "ml",
+    "emoji": "🍽",
+    "steps_de": [
+      {
+        "title": "Marinade zubereiten",
+        "ingredients": [
+          {
+            "amount": 100,
+            "unit": "gr",
+            "name": "Schalotten",
+            "bring": true
+          },
+          {
+            "amount": 35.7142857142857,
+            "unit": "gr",
+            "name": "Knoblauchzehen",
+            "bring": true
+          },
+          {
+            "amount": 142.857142857143,
+            "unit": "gr",
+            "name": "Paprikamark (Massa de Pimentão von Maçarico)",
+            "bring": true
+          },
+          {
+            "amount": 185.714285714286,
+            "unit": "gr",
+            "name": "Rapsöl raffiniert (nicht kaltgepresst, mit hohem Rauchpunkt)",
+            "bring": true
+          },
+          {
+            "amount": 4.28571428571429,
+            "unit": "gr",
+            "name": "Majoran (frisch)",
+            "bring": true
+          },
+          {
+            "amount": 4.28571428571429,
+            "unit": "gr",
+            "name": "Oregano (frisch)",
+            "bring": true
+          },
+          {
+            "amount": 8.57142857142857,
+            "unit": "gr",
+            "name": "Rosmarin (frisch)",
+            "bring": true
+          },
+          {
+            "amount": 8.57142857142857,
+            "unit": "gr",
+            "name": "Salbei (frisch)",
+            "bring": true
+          },
+          {
+            "amount": 8.57142857142857,
+            "unit": "gr",
+            "name": "Thymian (frisch)",
+            "bring": true
+          },
+          {
+            "amount": 2.85714285714286,
+            "unit": "TL",
+            "name": "Bohnenkraut (getrocknet)",
+            "bring": true
+          },
+          {
+            "amount": 4.28571428571429,
+            "unit": "TL",
+            "name": "Paprikapulver (edelsüss)",
+            "bring": true
+          },
+          {
+            "amount": 3.57142857142857,
+            "unit": "TL",
+            "name": "Chiliflocken",
+            "bring": true
+          },
+          {
+            "amount": 4.28571428571429,
+            "unit": "TL",
+            "name": "Zitronensaft (frisch gepresst)",
+            "bring": true
+          },
+          {
+            "amount": 4.28571428571429,
+            "unit": "TL",
+            "name": "Flüssighonig",
+            "bring": true
+          },
+          {
+            "amount": 4.28571428571429,
+            "unit": "Pr",
+            "name": "Zimtpulver",
+            "bring": true
+          },
+          {
+            "amount": 4.28571428571429,
+            "unit": "Pr",
+            "name": "Kreuzkümmelpulver",
+            "bring": true
+          },
+          {
+            "amount": 17.1428571428571,
+            "unit": "gr",
+            "name": "Salz",
+            "bring": false
+          }
+        ],
+        "text": "Schalotten und Knoblauch schälen, Triebe entfernen und dann grob Hacken. Die dicken Stiele der Kräuter entfernen. Alles bis auf das Salz in einen Mixer geben und mixen bis eine homogene Masse entsteht (ca. 5 bis 10 min mixen). Marinade probieren und erst jetzt salzen. Beim salzen darauf achten, wie stark das Paprikamark gesalzen ist. Die Marinade muss verhältnismässig stark gesalzen werden. Nochmals mixen und dann in eine Squeeze Flasche abfüllen und über Nacht kühl stellen. Mehrere Wochen im Kühlschrank in einer Squeeze Flasche haltbar (ohne Gewähr)."
+      }
+    ],
+    "steps_en": [
+      {
+        "title": "Prepare the marinade",
+        "ingredients": [
+          {
+            "amount": 100,
+            "unit": "g",
+            "name": "Shallots",
+            "bring": false
+          },
+          {
+            "amount": 35.7142857142857,
+            "unit": "g",
+            "name": "Garlic cloves",
+            "bring": false
+          },
+          {
+            "amount": 142.857142857143,
+            "unit": "g",
+            "name": "Bell pepper pulp",
+            "bring": false
+          },
+          {
+            "amount": 185.714285714286,
+            "unit": "g",
+            "name": "Nutural oil (not cold pressed, with high smoke point)",
+            "bring": false
+          },
+          {
+            "amount": 4.28571428571429,
+            "unit": "g",
+            "name": "Marjoram (fresh)",
+            "bring": false
+          },
+          {
+            "amount": 4.28571428571429,
+            "unit": "g",
+            "name": "Oregano (fresh)",
+            "bring": false
+          },
+          {
+            "amount": 8.57142857142857,
+            "unit": "g",
+            "name": "Rosemary (fresh)",
+            "bring": false
+          },
+          {
+            "amount": 8.57142857142857,
+            "unit": "g",
+            "name": "Sage (fresh)",
+            "bring": false
+          },
+          {
+            "amount": 8.57142857142857,
+            "unit": "g",
+            "name": "Thyme (fresh)",
+            "bring": false
+          },
+          {
+            "amount": 2.85714285714286,
+            "unit": "ts",
+            "name": "Savory (dried)",
+            "bring": false
+          },
+          {
+            "amount": 4.28571428571429,
+            "unit": "ts",
+            "name": "Paprika powder (sweet)",
+            "bring": false
+          },
+          {
+            "amount": 3.57142857142857,
+            "unit": "ts",
+            "name": "Chili flakes",
+            "bring": false
+          },
+          {
+            "amount": 4.28571428571429,
+            "unit": "ts",
+            "name": "Lemon juice freshly squeezed",
+            "bring": false
+          },
+          {
+            "amount": 4.28571428571429,
+            "unit": "ts",
+            "name": "Liquid honey",
+            "bring": false
+          },
+          {
+            "amount": 4.28571428571429,
+            "unit": "pn",
+            "name": "Cinnamon powder",
+            "bring": false
+          },
+          {
+            "amount": 4.28571428571429,
+            "unit": "pn",
+            "name": "Cumin powder",
+            "bring": false
+          },
+          {
+            "amount": 17.1428571428571,
+            "unit": "g",
+            "name": "Salt",
+            "bring": false
+          }
+        ],
+        "text": "Peel shallots and garlic, remove shoots and then roughly chop. Remove the thick stems of the herbs. Put everything except the salt in a blender and mix until a homogeneous mass is formed (mix for about 5 to 10 min). Taste the marinade and only now add salt. When salting, pay attention to how strongly the bell pepper pulp is salted. The marinade must be salted proportionally. Blend again and then pour into a squeeze bottle and refrigerate overnight. Keeps for several weeks in the refrigerator in a squeeze bottle (no guarantee)."
+      }
+    ]
   }
 ]
