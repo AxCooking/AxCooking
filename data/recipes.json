@@ -260,13 +260,23 @@
       "Vorspeise",
       "Fleisch",
       "Schweizer Küche",
-      "Schwein"
+      "Hauptspeise",
+      "Suppe",
+      "Schwein",
+      "Rind",
+      "Einkochen",
+      "Einfrieren"
     ],
     "tags_en": [
       "Starter",
       "Meat",
       "Swiss cuisine",
-      "Pork"
+      "Main course",
+      "Soup",
+      "Pork",
+      "Beef",
+      "Canning",
+      "Freezing food"
     ],
     "baseServings": 30,
     "servingsUnit_de": "Portionen",
