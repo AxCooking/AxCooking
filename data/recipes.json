@@ -1430,5 +1430,469 @@
         "text": "Peel shallots and garlic, remove shoots and then roughly chop. Remove the thick stems of the herbs. Put everything except the salt in a blender and mix until a homogeneous mass is formed (mix for about 5 to 10 min). Taste the marinade and only now add salt. When salting, pay attention to how strongly the bell pepper pulp is salted. The marinade must be salted proportionally. Blend again and then pour into a squeeze bottle and refrigerate overnight. Keeps for several weeks in the refrigerator in a squeeze bottle (no guarantee)."
       }
     ]
+  },
+  {
+    "id": "butter-chicken-murgh-makhani",
+    "title_de": "Butter Chicken Murgh Makhani",
+    "title_en": "Butter Chicken Murgh Makhani",
+    "desc_de": "",
+    "desc_en": "",
+    "difficulty_de": "normal",
+    "difficulty_en": "normal",
+    "workTime": "0m",
+    "cookTime": "0m",
+    "restTime": "0m",
+    "totalTime": "0m",
+    "youtubeId": "",
+    "youtubeUrl": "",
+    "tiktokUrl": "",
+    "tags_de": [
+      "Hauptspeise",
+      "Fleisch",
+      "Indische Küche",
+      "Scharf",
+      "Asiatische Küche",
+      "Frische Kräuter",
+      "Hühnchen",
+      "Reis"
+    ],
+    "tags_en": [
+      "Main course",
+      "Meat",
+      "Indian Cuisine",
+      "Spicy",
+      "Asian cuisine",
+      "Fresh herbs",
+      "Chicken",
+      "Rice"
+    ],
+    "baseServings": 4,
+    "servingsUnit_de": "Personen",
+    "servingsUnit_en": "people",
+    "emoji": "🍽",
+    "steps_de": [
+      {
+        "title": "Ingwer-Chili Paste zubereiten",
+        "ingredients": [
+          {
+            "amount": 40,
+            "unit": "gr",
+            "name": "Ingwer (frisch)",
+            "bring": true
+          },
+          {
+            "amount": 8,
+            "unit": "Stk.",
+            "name": "Knoblauch",
+            "bring": true
+          },
+          {
+            "amount": 2,
+            "unit": "Stk.",
+            "name": "Chilischote (rot)",
+            "bring": true
+          },
+          {
+            "amount": 20,
+            "unit": "ml",
+            "name": "Wasser",
+            "bring": false
+          }
+        ],
+        "text": "Alles geschält und grob geschnitten in Gewürzmühle geben und mit dem Wasser zu einer glatten Paste mixen. Alternativ kann auch ein Mörser verwendet werden. Die Ingwer-Chili Paste bei Seite stellen."
+      },
+      {
+        "title": "Hühnchen marinieren",
+        "ingredients": [
+          {
+            "amount": 800,
+            "unit": "gr",
+            "name": "Hühnchenschenkel (ohne Haut und Knochen)",
+            "bring": true
+          },
+          {
+            "amount": 4,
+            "unit": "EL",
+            "name": "Griechischer Joghurt (neutral)",
+            "bring": true
+          },
+          {
+            "amount": 4,
+            "unit": "TL",
+            "name": "Kichererbsenmehl",
+            "bring": true
+          },
+          {
+            "amount": 2,
+            "unit": "TL",
+            "name": "Paprikapulver (edelsüss)",
+            "bring": true
+          },
+          {
+            "amount": 1,
+            "unit": "TL",
+            "name": "Kashmiri Chilipulver",
+            "bring": true
+          },
+          {
+            "amount": 1,
+            "unit": "TL",
+            "name": "Garam Masala Gewürzmischung",
+            "bring": true
+          },
+          {
+            "amount": 2,
+            "unit": "TL",
+            "name": "Korianderpulver",
+            "bring": true
+          },
+          {
+            "amount": 2,
+            "unit": "Pr",
+            "name": "Zimtpulver",
+            "bring": true
+          },
+          {
+            "amount": 2,
+            "unit": "Pr",
+            "name": "Safran",
+            "bring": true
+          },
+          {
+            "amount": 4,
+            "unit": "Pr",
+            "name": "Salz",
+            "bring": false
+          }
+        ],
+        "text": "Kichererbsenmehl mit dem Joghurt in einer Schüssel verrühren, bis sich alle Klumpen aufgelöst haben. Dann die Ingwer-Chili Paste und die Gewürze hinzugeben und alles gut vermengen. Hünchenschenkel in ca. 5 cm grosse Würfel schneiden und mit der Marinade vermengen. Dann abgedeckt mindestens 2 h kühl stellen, besser über Nacht."
+      },
+      {
+        "title": "Hühnchen grillieren",
+        "ingredients": [
+          {
+            "amount": 50,
+            "unit": "gr",
+            "name": "Butter (ungesalzen)",
+            "bring": true
+          },
+          {
+            "amount": 6,
+            "unit": "Stk.",
+            "name": "Doppel-Grillspiesse",
+            "bring": false
+          }
+        ],
+        "text": "Butter in einem kleinen Topf zergehen lassen. Backofen mit Grillfunktion auf 250° C vorheizen. Mariniertes Hühnchen aus dem Kühlschrank nehmen und auf die Doppel-Grillspiesse stecken. Die überschüssige Marinade abtropfen lassen. Die Doppel-Grillspiesse vereinfachen das Wenden der Spiesse. Alternativ können auch pro Spiess zwei Holzspiesse verwendet werden.\r\n\r\nDie Hühnchenspiesse quer über eine Auflaufform legen und dann auf der höchst möglichen Backofenschiene für 20 Minuten grillieren. Alle 5 Minuten die Spiesse aus dem Backofen nehmen, die Spiesse um 180 Grad drehen und mit der zerlassenen Butter bepinseln. Die Pouletstücke sollten am Ende an einzelnen Stellen leicht verkohlte Ränder/Ecken haben. Die grillierten Hühnchenspiesse bei Seite stellen.\r\n\r\nWer seinen Backofen nicht auf 250° C erhitzen kann (wie ich), kann dasselbe auch auf dem Gasgrill erledigen."
+      },
+      {
+        "title": "Sauce Butter Chicken",
+        "ingredients": [
+          {
+            "amount": 10,
+            "unit": "Stk.",
+            "name": "Kardamomkapseln (leicht zerstossen)",
+            "bring": true
+          },
+          {
+            "amount": 1,
+            "unit": "Stk.",
+            "name": "Zimtstange",
+            "bring": true
+          },
+          {
+            "amount": 8,
+            "unit": "Stk.",
+            "name": "Nelken",
+            "bring": true
+          },
+          {
+            "amount": 2,
+            "unit": "Stk.",
+            "name": "Zwiebeln",
+            "bring": true
+          },
+          {
+            "amount": 20,
+            "unit": "gr",
+            "name": "Ingwer (frisch)",
+            "bring": true
+          },
+          {
+            "amount": 4,
+            "unit": "Stk.",
+            "name": "Chilischote (rot)",
+            "bring": true
+          },
+          {
+            "amount": 140,
+            "unit": "gr",
+            "name": "Tomatenmark (Tomatenpurée)",
+            "bring": true
+          },
+          {
+            "amount": 2,
+            "unit": "TL",
+            "name": "Kashmiri Chilipulver",
+            "bring": true
+          },
+          {
+            "amount": 1,
+            "unit": "TL",
+            "name": "Garam Masala Gewürzmischung",
+            "bring": true
+          },
+          {
+            "amount": 70,
+            "unit": "gr",
+            "name": "Butter (ungesalzen)",
+            "bring": true
+          },
+          {
+            "amount": 300,
+            "unit": "ml",
+            "name": "Sahne (Vollrahm)",
+            "bring": true
+          },
+          {
+            "amount": 2,
+            "unit": "EL",
+            "name": "Flüssighonig",
+            "bring": true
+          },
+          {
+            "amount": 2,
+            "unit": "EL",
+            "name": "Bockshornkleepulver",
+            "bring": true
+          },
+          {
+            "amount": 1,
+            "unit": "Pr",
+            "name": "Salz",
+            "bring": false
+          },
+          {
+            "amount": 1,
+            "unit": "Stk.",
+            "name": "Koriander (frisch)",
+            "bring": true
+          }
+        ],
+        "text": "Mit Salz abschmecken und mit Koriander garnieren und dann servieren."
+      }
+    ],
+    "steps_en": [
+      {
+        "title": "Ingwer-Chili Paste zubereiten",
+        "ingredients": [
+          {
+            "amount": 40,
+            "unit": "gr",
+            "name": "Ingwer (frisch)",
+            "bring": true
+          },
+          {
+            "amount": 8,
+            "unit": "Stk.",
+            "name": "Knoblauch",
+            "bring": true
+          },
+          {
+            "amount": 2,
+            "unit": "Stk.",
+            "name": "Chilischote (rot)",
+            "bring": true
+          },
+          {
+            "amount": 20,
+            "unit": "ml",
+            "name": "Wasser",
+            "bring": false
+          }
+        ],
+        "text": "Alles geschält und grob geschnitten in Gewürzmühle geben und mit dem Wasser zu einer glatten Paste mixen. Alternativ kann auch ein Mörser verwendet werden. Die Ingwer-Chili Paste bei Seite stellen."
+      },
+      {
+        "title": "Hühnchen marinieren",
+        "ingredients": [
+          {
+            "amount": 800,
+            "unit": "gr",
+            "name": "Hühnchenschenkel (ohne Haut und Knochen)",
+            "bring": true
+          },
+          {
+            "amount": 4,
+            "unit": "EL",
+            "name": "Griechischer Joghurt (neutral)",
+            "bring": true
+          },
+          {
+            "amount": 4,
+            "unit": "TL",
+            "name": "Kichererbsenmehl",
+            "bring": true
+          },
+          {
+            "amount": 2,
+            "unit": "TL",
+            "name": "Paprikapulver (edelsüss)",
+            "bring": true
+          },
+          {
+            "amount": 1,
+            "unit": "TL",
+            "name": "Kashmiri Chilipulver",
+            "bring": true
+          },
+          {
+            "amount": 1,
+            "unit": "TL",
+            "name": "Garam Masala Gewürzmischung",
+            "bring": true
+          },
+          {
+            "amount": 2,
+            "unit": "TL",
+            "name": "Korianderpulver",
+            "bring": true
+          },
+          {
+            "amount": 2,
+            "unit": "Pr",
+            "name": "Zimtpulver",
+            "bring": true
+          },
+          {
+            "amount": 2,
+            "unit": "Pr",
+            "name": "Safran",
+            "bring": true
+          },
+          {
+            "amount": 4,
+            "unit": "Pr",
+            "name": "Salz",
+            "bring": false
+          }
+        ],
+        "text": "Kichererbsenmehl mit dem Joghurt in einer Schüssel verrühren, bis sich alle Klumpen aufgelöst haben. Dann die Ingwer-Chili Paste und die Gewürze hinzugeben und alles gut vermengen. Hünchenschenkel in ca. 5 cm grosse Würfel schneiden und mit der Marinade vermengen. Dann abgedeckt mindestens 2 h kühl stellen, besser über Nacht."
+      },
+      {
+        "title": "Hühnchen grillieren",
+        "ingredients": [
+          {
+            "amount": 50,
+            "unit": "gr",
+            "name": "Butter (ungesalzen)",
+            "bring": true
+          },
+          {
+            "amount": 6,
+            "unit": "Stk.",
+            "name": "Doppel-Grillspiesse",
+            "bring": false
+          }
+        ],
+        "text": "Butter in einem kleinen Topf zergehen lassen. Backofen mit Grillfunktion auf 250° C vorheizen. Mariniertes Hühnchen aus dem Kühlschrank nehmen und auf die Doppel-Grillspiesse stecken. Die überschüssige Marinade abtropfen lassen. Die Doppel-Grillspiesse vereinfachen das Wenden der Spiesse. Alternativ können auch pro Spiess zwei Holzspiesse verwendet werden.\r\n\r\nDie Hühnchenspiesse quer über eine Auflaufform legen und dann auf der höchst möglichen Backofenschiene für 20 Minuten grillieren. Alle 5 Minuten die Spiesse aus dem Backofen nehmen, die Spiesse um 180 Grad drehen und mit der zerlassenen Butter bepinseln. Die Pouletstücke sollten am Ende an einzelnen Stellen leicht verkohlte Ränder/Ecken haben. Die grillierten Hühnchenspiesse bei Seite stellen.\r\n\r\nWer seinen Backofen nicht auf 250° C erhitzen kann (wie ich), kann dasselbe auch auf dem Gasgrill erledigen."
+      },
+      {
+        "title": "Sauce Butter Chicken",
+        "ingredients": [
+          {
+            "amount": 10,
+            "unit": "Stk.",
+            "name": "Kardamomkapseln (leicht zerstossen)",
+            "bring": true
+          },
+          {
+            "amount": 1,
+            "unit": "Stk.",
+            "name": "Zimtstange",
+            "bring": true
+          },
+          {
+            "amount": 8,
+            "unit": "Stk.",
+            "name": "Nelken",
+            "bring": true
+          },
+          {
+            "amount": 2,
+            "unit": "Stk.",
+            "name": "Zwiebeln",
+            "bring": true
+          },
+          {
+            "amount": 20,
+            "unit": "gr",
+            "name": "Ingwer (frisch)",
+            "bring": true
+          },
+          {
+            "amount": 4,
+            "unit": "Stk.",
+            "name": "Chilischote (rot)",
+            "bring": true
+          },
+          {
+            "amount": 140,
+            "unit": "gr",
+            "name": "Tomatenmark (Tomatenpurée)",
+            "bring": true
+          },
+          {
+            "amount": 2,
+            "unit": "TL",
+            "name": "Kashmiri Chilipulver",
+            "bring": true
+          },
+          {
+            "amount": 1,
+            "unit": "TL",
+            "name": "Garam Masala Gewürzmischung",
+            "bring": true
+          },
+          {
+            "amount": 70,
+            "unit": "gr",
+            "name": "Butter (ungesalzen)",
+            "bring": true
+          },
+          {
+            "amount": 300,
+            "unit": "ml",
+            "name": "Sahne (Vollrahm)",
+            "bring": true
+          },
+          {
+            "amount": 2,
+            "unit": "EL",
+            "name": "Flüssighonig",
+            "bring": true
+          },
+          {
+            "amount": 2,
+            "unit": "EL",
+            "name": "Bockshornkleepulver",
+            "bring": true
+          },
+          {
+            "amount": 1,
+            "unit": "Pr",
+            "name": "Salz",
+            "bring": false
+          },
+          {
+            "amount": 1,
+            "unit": "Stk.",
+            "name": "Koriander (frisch)",
+            "bring": true
+          }
+        ],
+        "text": "Mit Salz abschmecken und mit Koriander garnieren und dann servieren."
+      }
+    ]
   }
 ]
