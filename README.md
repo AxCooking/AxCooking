@@ -1,16 +1,28 @@
-## Hi there 👋
+# AxCooking
 
-<!--
-**AxCooking/AxCooking** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Rezept-Webseite von [AxCooking](https://www.axcooking.com) — einfache und köstliche Rezepte zum Nachkochen.
 
-Here are some ideas to get you started:
+## Technologie
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+- Single-Page-Application als eine `index.html`
+- Gehostet auf GitHub Pages unter `www.axcooking.com`
+- Daten gespeichert als JSON im Repository (`data/recipes.json`, `data/stats.json`, `data/likes.json`, `data/comments.json`)
+- Rezeptbilder in `images/`
+- Statische SEO-Seiten in `recipes/` (Schema.org JSON-LD)
+- Excel-Import (XLSX.js) für Rezeptverwaltung
+
+## Struktur
+
+```
+index.html          — Komplette Webseite
+data/
+  recipes.json      — Alle Rezeptdaten
+  stats.json        — Klickzahlen
+  likes.json        — Likes
+  comments.json     — Kommentare
+images/             — Rezeptbilder (800×450px, optimiert)
+recipes/            — Statische SEO-Seiten pro Rezept
+sitemap.xml         — Sitemap für Google
+robots.txt          — Crawler-Anweisungen
+CNAME               — Custom Domain (www.axcooking.com)
+```
