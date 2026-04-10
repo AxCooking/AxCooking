@@ -1,0 +1,49 @@
+name: Sync staging with main
+
+on:
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Sync main into staging
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git fetch origin staging
+          git checkout staging
+
+          git checkout main -- \
+            data/recipes.json \
+            data/stats.json \
+            data/comments.json \
+            data/likes.json \
+            images/ \
+            recipes/ \
+            de/ \
+            en/ \
+            404.html \
+            robots.txt \
+            sitemap.xml
+
+          git checkout main -- index.html
+          sed -i "s/GH_BRANCH='main'/GH_BRANCH='staging'/g" index.html
+
+          if git diff --cached --quiet && git diff --quiet; then
+            echo "Nothing to sync."
+          else
+            git add -A
+            git commit -m "Sync staging with main"
+            git push origin staging
+          fi
