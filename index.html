@@ -599,12 +599,7 @@ function showListDirect(){currentRecipeId=null;cachedNavList=null;document.getEl
   var m=p.match(/^(?:\/AxCooking)?\/(de|en)\/(.+)/);
   if(m){window.location.replace(window.location.origin+'/#/'+m[1]+'/recipe/'+m[2]);return}
 })();
-(async function(){if(isMobile)document.body.classList.add('is-mobile');const savedToken=sessionStorage.getItem('gh_token');if(savedToken){ghToken=savedToken;loggedIn=true;document.getElementById('tabImport').classList.remove('hidden');document.getElementById('authBtn').innerHTML='🔓 '+t('logout')}await // Sicherer Start: loadRecipes() via DOMContentLoaded oder sofort
-if(document.readyState==='loading'){
-  document.addEventListener('DOMContentLoaded', loadRecipes);
-} else {
-  loadRecipes();
-}checkHash()})();
+(async function(){if(isMobile)document.body.classList.add('is-mobile');const savedToken=sessionStorage.getItem('gh_token');if(savedToken){ghToken=savedToken;loggedIn=true;document.getElementById('tabImport').classList.remove('hidden');document.getElementById('authBtn').innerHTML='🔓 '+t('logout')}await loadRecipes();checkHash()})();
 window.addEventListener('hashchange',checkHash);
 </script>
 </body>
