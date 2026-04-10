@@ -1,4 +1,4 @@
-name: Sync staging with main
+name: Sync Test mit Prod
 
 on:
   workflow_dispatch:
