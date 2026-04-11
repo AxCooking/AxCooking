@@ -6,44 +6,43 @@ on:
 jobs:
   sync:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-
     steps:
-      - name: Checkout main
+      - name: Checkout PROD
         uses: actions/checkout@v4
         with:
-          ref: main
-          fetch-depth: 0
+          repository: AxCooking/AxCooking
+          token: ${{ secrets.SYNC_TOKEN }}
+          path: prod
 
-      - name: Sync main into staging
+      - name: Checkout TEST
+        uses: actions/checkout@v4
+        with:
+          repository: AxCooking/AxCooking-Test
+          token: ${{ secrets.SYNC_TOKEN }}
+          path: test
+
+      - name: Sync index.html PROD zu TEST
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          cp prod/index.html test/index.html
+          sed -i "s/GH_REPO='AxCooking'/GH_REPO='AxCooking-Test'/g" test/index.html
 
-          git fetch origin staging
-          git checkout staging
+      - name: Sync logos Ordner
+        run: |
+          rm -rf test/logos
+          mkdir -p test/logos
+          cp -r prod/logos/. test/logos/
 
-          git checkout main -- \
-            data/recipes.json \
-            data/stats.json \
-            data/comments.json \
-            data/likes.json \
-            images/ \
-            recipes/ \
-            de/ \
-            en/ \
-            404.html \
-            robots.txt \
-            sitemap.xml
+      - name: Sync data Ordner
+        run: |
+          rm -rf test/data
+          mkdir -p test/data
+          cp -r prod/data/. test/data/
 
-          git checkout main -- index.html
-          sed -i "s/GH_BRANCH='main'/GH_BRANCH='staging'/g" index.html
-
-          if git diff --cached --quiet && git diff --quiet; then
-            echo "Nothing to sync."
-          else
-            git add -A
-            git commit -m "Sync staging with main"
-            git push origin staging
-          fi
+      - name: Commit und Push zu TEST
+        run: |
+          cd test
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add -A
+          git diff --staged --quiet || git commit -m "Sync PROD zu TEST $(date '+%Y-%m-%d %H:%M')"
+          git push https://x-access-token:${{ secrets.SYNC_TOKEN }}@github.com/AxCooking/AxCooking-Test.git main
