@@ -1,0 +1,54 @@
+name: Sync Test nach Prod (Code only)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+    steps:
+      - name: Checkout TEST
+        uses: actions/checkout@v4
+        with:
+          repository: AxCooking/AxCooking-Test
+          token: ${{ secrets.SYNC_TOKEN }}
+          path: test
+
+      - name: Checkout PROD
+        uses: actions/checkout@v4
+        with:
+          repository: AxCooking/AxCooking
+          token: ${{ secrets.SYNC_TOKEN }}
+          path: prod
+
+      - name: Sync index.html TEST nach PROD
+        run: cp test/index.html prod/index.html
+
+      - name: Sync 404.html TEST nach PROD
+        run: cp test/404.html prod/404.html
+
+      - name: Sync logos Ordner TEST nach PROD
+        run: |
+          rm -rf prod/logos
+          mkdir -p prod/logos
+          cp -r test/logos/. prod/logos/
+
+      - name: config.js auf PROD nicht ueberschreiben
+        run: echo "config.js bleibt unveraendert auf PROD (GH_REPO=AxCooking)"
+
+      - name: test-banner.html wird nicht kopiert
+        run: echo "test-banner.html existiert nur auf TEST"
+
+      - name: Daten bleiben auf PROD
+        run: echo "data/ images/ recipes/ sitemap.xml robots.txt werden nicht kopiert"
+
+      - name: Commit und Push zu PROD
+        run: |
+          cd prod
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add index.html 404.html logos/
+          git diff --staged --quiet || git commit -m "Sync TEST nach PROD (Code) $(date '+%Y-%m-%d %H:%M')"
+          git push https://x-access-token:${{ secrets.SYNC_TOKEN }}@github.com/AxCooking/AxCooking.git main
