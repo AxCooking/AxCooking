@@ -8,14 +8,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout PROD
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.2.2
         with:
           repository: AxCooking/AxCooking
           token: ${{ secrets.SYNC_TOKEN }}
           path: prod
 
       - name: Checkout TEST
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.2.2
         with:
           repository: AxCooking/AxCooking-Test
           token: ${{ secrets.SYNC_TOKEN }}
