@@ -25,16 +25,8 @@ jobs:
 
       - name: Sync index.html PROD zu TEST
         run: |
-          python3 - <<'PYEOF'
-          with open('prod/index.html', 'r') as f:
-              c = f.read()
-          c = c.replace("GH_REPO='AxCooking'", "GH_REPO='AxCooking-Test'")
-          c = c.replace('href="/logos/', 'href="logos/')
-          c = c.replace('src="/logos/', 'src="logos/')
-          with open('test/index.html', 'w') as f:
-              f.write(c)
-          print('index.html angepasst')
-          PYEOF
+          cp prod/index.html test/index.html
+          sed -i "s/GH_REPO='AxCooking'/GH_REPO='AxCooking-Test'/g" test/index.html
 
       - name: Sync logos Ordner
         run: |
