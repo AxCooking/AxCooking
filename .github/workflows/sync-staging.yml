@@ -27,6 +27,9 @@ jobs:
         run: |
           cp prod/index.html test/index.html
           sed -i "s/GH_REPO='AxCooking'/GH_REPO='AxCooking-Test'/g" test/index.html
+          sed -i "s|href="/logos/|href="logos/|g" test/index.html
+          sed -i "s|src="/logos/|src="logos/|g" test/index.html
+          sed -i "s|src="/images/|src="images/|g" test/index.html
 
       - name: Sync logos Ordner
         run: |
