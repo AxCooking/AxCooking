@@ -40,6 +40,20 @@ jobs:
           mkdir -p test/data
           cp -r prod/data/. test/data/
 
+      - name: Sync images Ordner
+        run: |
+          rm -rf test/images
+          mkdir -p test/images
+          cp -r prod/images/. test/images/
+
+      - name: Sync recipes Ordner
+        run: |
+          rm -rf test/recipes
+          if [ -d prod/recipes ]; then
+            mkdir -p test/recipes
+            cp -r prod/recipes/. test/recipes/
+          fi
+
       - name: Commit und Push zu TEST
         run: |
           cd test
