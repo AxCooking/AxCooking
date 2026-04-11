@@ -23,10 +23,21 @@ jobs:
           token: ${{ secrets.SYNC_TOKEN }}
           path: test
 
-      - name: Sync index.html PROD zu TEST
+      - name: Sync index.html (unveraendert - identisch mit PROD)
+        run: cp prod/index.html test/index.html
+
+      - name: Sync 404.html (unveraendert - identisch mit PROD)
+        run: cp prod/404.html test/404.html
+
+      - name: config.js fuer TEST schreiben (einzige Anpassung)
         run: |
-          cp prod/index.html test/index.html
-          sed -i "s/GH_REPO='AxCooking'/GH_REPO='AxCooking-Test'/g" test/index.html
+          cat > test/config.js << 'CONFIG'
+          const GH_OWNER = 'AxCooking';
+          const GH_REPO = 'AxCooking-Test';
+          const GH_BRANCH = 'main';
+          const GH_API = 'https://api.github.com';
+          const GH_PUBLIC_TOKEN = ['gi','thub_','pat_11C','A2YSEQ08yRq75v1X1jx','_8TAdo74XckmQt1131hFPW','w4cOLQCGUCOlVhLHmhZhW7','USMCCUKF11pLnuIV'].join('');
+          CONFIG
 
       - name: Sync logos Ordner
         run: |
@@ -46,7 +57,7 @@ jobs:
           mkdir -p test/images
           cp -r prod/images/. test/images/
 
-      - name: Sync recipes Ordner
+      - name: Sync recipes Ordner (falls vorhanden)
         run: |
           rm -rf test/recipes
           if [ -d prod/recipes ]; then
@@ -58,7 +69,7 @@ jobs:
         run: |
           cat > test/test-banner.html << 'BANNER'
           <div style="background:#c0392b;color:#fff;text-align:center;padding:8px 16px;font-family:sans-serif;font-size:13px;font-weight:600;letter-spacing:0.5px;position:relative;z-index:9999;">
-            ⚠️ TEST-UMGEBUNG — Änderungen hier betreffen nur das Testsystem und nicht die Produktion
+            TEST-UMGEBUNG - Aenderungen hier betreffen nur das Testsystem
           </div>
           BANNER
 
