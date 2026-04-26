@@ -35,6 +35,18 @@ jobs:
           mkdir -p prod/logos
           cp -r test/logos/. prod/logos/
 
+      - name: Sync favicon.ico TEST nach PROD
+        run: |
+          if [ -f test/favicon.ico ]; then
+            cp test/favicon.ico prod/favicon.ico
+          fi
+
+      - name: Sync apple-touch-icon.png TEST nach PROD
+        run: |
+          if [ -f test/apple-touch-icon.png ]; then
+            cp test/apple-touch-icon.png prod/apple-touch-icon.png
+          fi
+
       - name: config.js auf PROD nicht ueberschreiben
         run: echo "config.js bleibt unveraendert auf PROD (GH_REPO=AxCooking)"
 
@@ -49,6 +61,6 @@ jobs:
           cd prod
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
-          git add index.html 404.html logos/
+          git add index.html 404.html logos/ favicon.ico apple-touch-icon.png
           git diff --staged --quiet || git commit -m "Sync TEST nach PROD (Code) $(date '+%Y-%m-%d %H:%M')"
           git push https://x-access-token:${{ secrets.SYNC_TOKEN }}@github.com/AxCooking/AxCooking.git main
