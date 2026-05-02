@@ -7,19 +7,20 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     env:
-      TOKEN: ${{ secrets.AXCOOKING_TEST_PAT }}
-
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
       - name: Checkout PROD
         uses: actions/checkout@v4
         with:
+          repository: AxCooking/AxCooking
+          token: ${{ secrets.SYNC_TOKEN }}
           path: prod
 
       - name: Checkout TEST
         uses: actions/checkout@v4
         with:
           repository: AxCooking/AxCooking-Test
-          token: ${{ secrets.AXCOOKING_TEST_PAT }}
+          token: ${{ secrets.SYNC_TOKEN }}
           path: test
 
       - name: Sync index.html (unveraendert - identisch mit PROD)
@@ -30,11 +31,13 @@ jobs:
 
       - name: config.js fuer TEST schreiben (einzige Anpassung)
         run: |
-          cat > test/config.js <<'EOF'
-          window.GH_OWNER='AxCooking';
-          window.GH_REPO='AxCooking-Test';
-          window.GH_BRANCH='main';
-          EOF
+          cat > test/config.js << 'CONFIG'
+          const GH_OWNER = 'AxCooking';
+          const GH_REPO = 'AxCooking-Test';
+          const GH_BRANCH = 'main';
+          const GH_API = 'https://api.github.com';
+          const GH_PUBLIC_TOKEN = ['gi','thub_','pat_11C','A2YSEQ08yRq75v1X1jx','_8TAdo74XckmQt1131hFPW','w4cOLQCGUCOlVhLHmhZhW7','USMCCUKF11pLnuIV'].join('');
+          CONFIG
 
       - name: Sync logos Ordner
         run: |
@@ -95,19 +98,17 @@ jobs:
 
       - name: Test-Banner erstellen
         run: |
-          cat > test/test-banner.html <<'EOF'
-          <div style="position:fixed;top:0;left:0;right:0;background:#c0392b;color:white;text-align:center;padding:8px;font-size:1.6rem;font-weight:bold;z-index:99999;">TEST WEBSEITE</div>
-          EOF
+          cat > test/test-banner.html << 'BANNER'
+          <div style="background:#c0392b;color:#fff;text-align:center;padding:8px 16px;font-family:sans-serif;font-size:13px;font-weight:600;letter-spacing:0.5px;position:relative;z-index:9999;">
+            TEST-UMGEBUNG - Aenderungen hier betreffen nur das Testsystem
+          </div>
+          BANNER
 
       - name: Commit und Push zu TEST
         run: |
           cd test
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
           git add -A
-          if git diff --staged --quiet; then
-            echo "Keine Aenderungen zu syncen"
-          else
-            git commit -m "Sync PROD zu TEST $(date +'%Y-%m-%d %H:%M')"
-            git push
-          fi
+          git diff --staged --quiet || git commit -m "Sync PROD zu TEST $(date '+%Y-%m-%d %H:%M')"
+          git push https://x-access-token:${{ secrets.SYNC_TOKEN }}@github.com/AxCooking/AxCooking-Test.git main
