@@ -47,6 +47,18 @@ jobs:
             cp test/apple-touch-icon.png prod/apple-touch-icon.png
           fi
 
+      - name: Sync sw.js TEST nach PROD (PWA Service Worker)
+        run: |
+          if [ -f test/sw.js ]; then
+            cp test/sw.js prod/sw.js
+          fi
+
+      - name: Sync manifest.webmanifest TEST nach PROD (PWA Manifest)
+        run: |
+          if [ -f test/manifest.webmanifest ]; then
+            cp test/manifest.webmanifest prod/manifest.webmanifest
+          fi
+
       - name: config.js auf PROD nicht ueberschreiben
         run: echo "config.js bleibt unveraendert auf PROD (GH_REPO=AxCooking)"
 
