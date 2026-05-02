@@ -1,181 +1,181 @@
 {
   "version": 2,
-  "generatedAt": "2026-05-02T18:11:49.325Z",
+  "generatedAt": "2026-05-02T18:13:33.004Z",
   "images": {
     "bruschetta": {
       "slug": "bruschetta",
       "sources": {
         "16x9": {
           "filename": "bruschetta-16x9.jpg",
-          "hash": "f908f4c7cdd3e60dd7b280f8f05e753156f1f77793a6d987c7325bba62867c49"
+          "hash": "25737f77613d810d0eac27746275adff4c02e934f0df33fd0d87cabe97d5728f"
         },
         "4x3": {
           "filename": "bruschetta-4x3.jpg",
-          "hash": "2840aff8a3466f744c0a3a6130c11cf16a653d493e070813a8528f9122cab7ab"
+          "hash": "32618c3e6e138fad0f154bf7e75c72fee50414b13388932e01a4415bed70a895"
         }
       },
-      "compositeKey": "f908f4c7cdd3e60dd7b280f8f05e753156f1f77793a6d987c7325bba62867c49|2840aff8a3466f744c0a3a6130c11cf16a653d493e070813a8528f9122cab7ab|-",
-      "sourceWidth": 3638,
-      "sourceHeight": 2046,
-      "encodedAt": "2026-05-02T18:11:49.325Z",
+      "compositeKey": "25737f77613d810d0eac27746275adff4c02e934f0df33fd0d87cabe97d5728f|32618c3e6e138fad0f154bf7e75c72fee50414b13388932e01a4415bed70a895|-",
+      "sourceWidth": 2982,
+      "sourceHeight": 1678,
+      "encodedAt": "2026-05-02T18:13:33.004Z",
       "outputs": [
         {
           "path": "images/optimized/bruschetta-400-16x9.avif",
-          "bytes": 19382,
+          "bytes": 16685,
           "format": "avif",
           "width": 400,
           "height": 225
         },
         {
           "path": "images/optimized/bruschetta-400-16x9.webp",
-          "bytes": 21974,
+          "bytes": 18928,
           "format": "webp",
           "width": 400,
           "height": 225
         },
         {
           "path": "images/optimized/bruschetta-400-16x9.jpg",
-          "bytes": 33985,
+          "bytes": 31846,
           "format": "jpg",
           "width": 400,
           "height": 225
         },
         {
           "path": "images/optimized/bruschetta-800-16x9.avif",
-          "bytes": 61378,
+          "bytes": 39883,
           "format": "avif",
           "width": 800,
           "height": 450
         },
         {
           "path": "images/optimized/bruschetta-800-16x9.webp",
-          "bytes": 71824,
+          "bytes": 49458,
           "format": "webp",
           "width": 800,
           "height": 450
         },
         {
           "path": "images/optimized/bruschetta-800-16x9.jpg",
-          "bytes": 112525,
+          "bytes": 88926,
           "format": "jpg",
           "width": 800,
           "height": 450
         },
         {
           "path": "images/optimized/bruschetta-1200-16x9.avif",
-          "bytes": 114899,
+          "bytes": 64573,
           "format": "avif",
           "width": 1200,
           "height": 675
         },
         {
           "path": "images/optimized/bruschetta-1200-16x9.webp",
-          "bytes": 135946,
+          "bytes": 83140,
           "format": "webp",
           "width": 1200,
           "height": 675
         },
         {
           "path": "images/optimized/bruschetta-1200-16x9.jpg",
-          "bytes": 217652,
+          "bytes": 159518,
           "format": "jpg",
           "width": 1200,
           "height": 675
         },
         {
           "path": "images/optimized/bruschetta-400-4x3.avif",
-          "bytes": 17236,
+          "bytes": 21023,
           "format": "avif",
           "width": 400,
           "height": 300
         },
         {
           "path": "images/optimized/bruschetta-400-4x3.webp",
-          "bytes": 21624,
+          "bytes": 24246,
           "format": "webp",
           "width": 400,
           "height": 300
         },
         {
           "path": "images/optimized/bruschetta-400-4x3.jpg",
-          "bytes": 34866,
+          "bytes": 40931,
           "format": "jpg",
           "width": 400,
           "height": 300
         },
         {
           "path": "images/optimized/bruschetta-800-4x3.avif",
-          "bytes": 49052,
+          "bytes": 50084,
           "format": "avif",
           "width": 800,
           "height": 600
         },
         {
           "path": "images/optimized/bruschetta-800-4x3.webp",
-          "bytes": 62490,
+          "bytes": 62082,
           "format": "webp",
           "width": 800,
           "height": 600
         },
         {
           "path": "images/optimized/bruschetta-800-4x3.jpg",
-          "bytes": 105712,
+          "bytes": 112852,
           "format": "jpg",
           "width": 800,
           "height": 600
         },
         {
           "path": "images/optimized/bruschetta-1200-4x3.avif",
-          "bytes": 82149,
+          "bytes": 76750,
           "format": "avif",
           "width": 1200,
           "height": 900
         },
         {
           "path": "images/optimized/bruschetta-1200-4x3.webp",
-          "bytes": 108190,
+          "bytes": 101592,
           "format": "webp",
           "width": 1200,
           "height": 900
         },
         {
           "path": "images/optimized/bruschetta-1200-4x3.jpg",
-          "bytes": 197427,
+          "bytes": 200409,
           "format": "jpg",
           "width": 1200,
           "height": 900
         },
         {
           "path": "images/optimized/bruschetta-pin.jpg",
-          "bytes": 245371,
+          "bytes": 221521,
           "format": "jpg",
           "width": 1000,
           "height": 1500
         },
         {
           "path": "images/optimized/bruschetta-pin.webp",
-          "bytes": 131114,
+          "bytes": 103608,
           "format": "webp",
           "width": 1000,
           "height": 1500
         },
         {
           "path": "images/optimized/bruschetta-square.jpg",
-          "bytes": 241047,
+          "bytes": 220736,
           "format": "jpg",
           "width": 1200,
           "height": 1200
         },
         {
           "path": "images/optimized/bruschetta-og.jpg",
-          "bytes": 214268,
+          "bytes": 152588,
           "format": "jpg",
           "width": 1200,
           "height": 630
         },
         {
           "path": "images/optimized/bruschetta.jpg",
-          "bytes": 112525,
+          "bytes": 88926,
           "format": "jpg",
           "width": 800,
           "height": 450
