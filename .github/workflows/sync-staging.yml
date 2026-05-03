@@ -96,6 +96,14 @@ jobs:
           if [ -f prod/package.json ]; then cp prod/package.json test/package.json; fi
           if [ -f prod/package-lock.json ]; then cp prod/package-lock.json test/package-lock.json; fi
 
+      - name: Sync sw.js (PWA Service Worker)
+        run: |
+          if [ -f prod/sw.js ]; then cp prod/sw.js test/sw.js; fi
+
+      - name: Sync manifest.webmanifest (PWA Manifest)
+        run: |
+          if [ -f prod/manifest.webmanifest ]; then cp prod/manifest.webmanifest test/manifest.webmanifest; fi
+
       - name: Test-Banner erstellen
         run: |
           cat > test/test-banner.html << 'BANNER'
