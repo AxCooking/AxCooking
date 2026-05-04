@@ -18,7 +18,10 @@
   "kartoffelsalat-schwaebische-art": 0,
   "original-wiener-schnitzel": 0,
   "pasta-carbonara-mit-pochiertem-ei": 0,
-  "butter-chicken-murgh-makhani": 0,
+  "butter-chicken-murgh-makhani": {
+    "likes": 0,
+    "views": 1
+  },
   "bruschetta": {
     "likes": 0,
     "views": 4
