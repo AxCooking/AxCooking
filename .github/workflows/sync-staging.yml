@@ -1,4 +1,4 @@
-name: Sync Test mit Prod
+name: Sync PROD→TEST (Code+Daten)
 
 on:
   workflow_dispatch:
