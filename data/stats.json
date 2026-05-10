@@ -53,7 +53,10 @@
   },
   "pasta-pesto-genovese": 0,
   "pesto-genovese-basilikum-pesto": 0,
-  "rindsfilet-steak": 0,
+  "rindsfilet-steak": {
+    "likes": 0,
+    "views": 1
+  },
   "sauce-bolognese-zum-einkochen": {
     "likes": 0,
     "views": 1
