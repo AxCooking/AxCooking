@@ -26,6 +26,16 @@ jobs:
       - name: Sync index.html (unveraendert - identisch mit PROD)
         run: cp prod/index.html test/index.html
 
+      - name: Sync /de/index.html und /en/index.html (Lang-Subdirs PROD nach TEST)
+        run: |
+          mkdir -p test/de test/en
+          if [ -f prod/de/index.html ]; then
+            cp prod/de/index.html test/de/index.html
+          fi
+          if [ -f prod/en/index.html ]; then
+            cp prod/en/index.html test/en/index.html
+          fi
+
       - name: Sync 404.html (unveraendert - identisch mit PROD)
         run: cp prod/404.html test/404.html
 
