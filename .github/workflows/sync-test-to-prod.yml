@@ -1,4 +1,4 @@
-undefinedname: Sync TEST→PROD (nur Code)
+name: Sync TEST→PROD (nur Code)
 
 on:
   workflow_dispatch:
@@ -84,83 +84,5 @@ jobs:
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
           git add index.html de/index.html en/index.html 404.html logos/ favicon.ico apple-touch-icon.png sw.js manifest.webmanifest
-          git diff --staged --quiet || git commit -m "Sync TEST nach PROD (Code) $(date '+%Y-%m-%d %H:%M')"
-          git push https://x-access-token:${{ secrets.SYNC_TOKEN }}@github.com/AxCooking/AxCooking.git main
-name: Sync TEST→PROD (nur Code)
-
-on:
-  workflow_dispatch:
-
-jobs:
-  sync:
-    runs-on: ubuntu-latest
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-    steps:
-      - name: Checkout TEST
-        uses: actions/checkout@v4
-        with:
-          repository: AxCooking/AxCooking-Test
-          token: ${{ secrets.SYNC_TOKEN }}
-          path: test
-
-      - name: Checkout PROD
-        uses: actions/checkout@v4
-        with:
-          repository: AxCooking/AxCooking
-          token: ${{ secrets.SYNC_TOKEN }}
-          path: prod
-
-      - name: Sync index.html TEST nach PROD
-        run: cp test/index.html prod/index.html
-
-      - name: Sync 404.html TEST nach PROD
-        run: cp test/404.html prod/404.html
-
-      - name: Sync logos Ordner TEST nach PROD
-        run: |
-          rm -rf prod/logos
-          mkdir -p prod/logos
-          cp -r test/logos/. prod/logos/
-
-      - name: Sync favicon.ico TEST nach PROD
-        run: |
-          if [ -f test/favicon.ico ]; then
-            cp test/favicon.ico prod/favicon.ico
-          fi
-
-      - name: Sync apple-touch-icon.png TEST nach PROD
-        run: |
-          if [ -f test/apple-touch-icon.png ]; then
-            cp test/apple-touch-icon.png prod/apple-touch-icon.png
-          fi
-
-      - name: Sync sw.js TEST nach PROD (PWA Service Worker)
-        run: |
-          if [ -f test/sw.js ]; then
-            cp test/sw.js prod/sw.js
-          fi
-
-      - name: Sync manifest.webmanifest TEST nach PROD (PWA Manifest)
-        run: |
-          if [ -f test/manifest.webmanifest ]; then
-            cp test/manifest.webmanifest prod/manifest.webmanifest
-          fi
-
-      - name: config.js auf PROD nicht ueberschreiben
-        run: echo "config.js bleibt unveraendert auf PROD (GH_REPO=AxCooking)"
-
-      - name: test-banner.html wird nicht kopiert
-        run: echo "test-banner.html existiert nur auf TEST"
-
-      - name: Daten bleiben auf PROD
-        run: echo "data/ images/ recipes/ sitemap.xml robots.txt werden nicht kopiert"
-
-      - name: Commit und Push zu PROD
-        run: |
-          cd prod
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
-          git add index.html 404.html logos/ favicon.ico apple-touch-icon.png sw.js manifest.webmanifest
           git diff --staged --quiet || git commit -m "Sync TEST nach PROD (Code) $(date '+%Y-%m-%d %H:%M')"
           git push https://x-access-token:${{ secrets.SYNC_TOKEN }}@github.com/AxCooking/AxCooking.git main
