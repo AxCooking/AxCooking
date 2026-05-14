@@ -67,7 +67,10 @@
     "likes": 0,
     "views": 2
   },
-  "pesto-genovese-basilikum-pesto": 0,
+  "pesto-genovese-basilikum-pesto": {
+    "likes": 0,
+    "views": 1
+  },
   "rindsfilet-steak": {
     "likes": 0,
     "views": 1
