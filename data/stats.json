@@ -11,7 +11,10 @@
     "likes": 0,
     "views": 0
   },
-  "pasta-alfredo": 0,
+  "pasta-alfredo": {
+    "likes": 0,
+    "views": 1
+  },
   "buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren": {
     "likes": 0,
     "views": 0
