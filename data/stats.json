@@ -39,7 +39,10 @@
     "likes": 0,
     "views": 0
   },
-  "kartoffelsalat-schwaebische-art": 0,
+  "kartoffelsalat-schwaebische-art": {
+    "likes": 0,
+    "views": 1
+  },
   "original-wiener-schnitzel": {
     "likes": 0,
     "views": 4
