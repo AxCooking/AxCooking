@@ -36,16 +36,6 @@ jobs:
             cp prod/en/index.html test/en/index.html
           fi
 
-      - name: Sync /de/index.html und /en/index.html (Lang-Subdirs PROD nach TEST)
-        run: |
-          mkdir -p test/de test/en
-          if [ -f prod/de/index.html ]; then
-            cp prod/de/index.html test/de/index.html
-          fi
-          if [ -f prod/en/index.html ]; then
-            cp prod/en/index.html test/en/index.html
-          fi
-
       - name: Sync 404.html (unveraendert - identisch mit PROD)
         run: cp prod/404.html test/404.html
 
@@ -140,3 +130,20 @@ jobs:
           git add -A
           git diff --staged --quiet || git commit -m "Sync PROD zu TEST $(date '+%Y-%m-%d %H:%M')"
           git push https://x-access-token:${{ secrets.SYNC_TOKEN }}@github.com/AxCooking/AxCooking-Test.git main
+
+      - name: Mirror users + user_recipes D1 von PROD-DB nach TEST-DB
+        run: |
+          set -e
+          echo "Calling /admin/sync-users-prod-to-test ..."
+          HTTP_CODE=$(curl -s -o /tmp/sync-response.json -w "%{http_code}" -X POST \
+            -H "X-Sync-Token: ${{ secrets.SYNC_USERS_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            "https://axcooking-api.axcooking.workers.dev/admin/sync-users-prod-to-test")
+          echo "HTTP $HTTP_CODE"
+          echo "Response body:"
+          cat /tmp/sync-response.json
+          echo
+          if [ "$HTTP_CODE" != "200" ]; then
+            echo "Mirror call failed with HTTP $HTTP_CODE"
+            exit 1
+          fi
